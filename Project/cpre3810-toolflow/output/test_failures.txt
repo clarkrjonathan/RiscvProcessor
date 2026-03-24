@@ -1,0 +1,6 @@
+proj/riscv/Proj_sort_template.s
+proj/riscv/addiseq.s
+proj/riscv/fibonacci.s
+proj/riscv/grendel.s
+proj/riscv/lab3Seq.s
+proj/riscv/simplebranch.s
