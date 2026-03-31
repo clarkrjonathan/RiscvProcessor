@@ -1,0 +1,65 @@
+[inst #1] addi x1,x0,1
+Register Write to Reg: 0x01 Val: 0x00000001
+[inst #2] add x2,x0,x1
+Register Write to Reg: 0x02 Val: 0x00000001
+[inst #3] add x3,x1,x2
+Register Write to Reg: 0x03 Val: 0x00000002
+[inst #4] add x4,x2,x3
+Register Write to Reg: 0x04 Val: 0x00000003
+[inst #5] add x5,x3,x4
+Register Write to Reg: 0x05 Val: 0x00000005
+[inst #6] add x6,x4,x5
+Register Write to Reg: 0x06 Val: 0x00000008
+[inst #7] add x7,x5,x6
+Register Write to Reg: 0x07 Val: 0x0000000D
+[inst #8] add x8,x6,x7
+Register Write to Reg: 0x08 Val: 0x00000015
+[inst #9] add x9,x7,x8
+Register Write to Reg: 0x09 Val: 0x00000022
+[inst #10] add x10,x8,x9
+Register Write to Reg: 0x0A Val: 0x00000037
+[inst #11] add x11,x9,x10
+Register Write to Reg: 0x0B Val: 0x00000059
+[inst #12] add x12,x10,x11
+Register Write to Reg: 0x0C Val: 0x00000090
+[inst #13] add x13,x11,x12
+Register Write to Reg: 0x0D Val: 0x000000E9
+[inst #14] add x14,x12,x13
+Register Write to Reg: 0x0E Val: 0x00000179
+[inst #15] add x15,x13,x14
+Register Write to Reg: 0x0F Val: 0x00000262
+[inst #16] add x16,x14,x15
+Register Write to Reg: 0x10 Val: 0x000003DB
+[inst #17] add x17,x15,x16
+Register Write to Reg: 0x11 Val: 0x0000063D
+[inst #18] add x18,x16,x17
+Register Write to Reg: 0x12 Val: 0x00000A18
+[inst #19] add x19,x17,x18
+Register Write to Reg: 0x13 Val: 0x00001055
+[inst #20] add x20,x18,x19
+Register Write to Reg: 0x14 Val: 0x00001A6D
+[inst #21] add x21,x19,x20
+Register Write to Reg: 0x15 Val: 0x00002AC2
+[inst #22] add x22,x20,x21
+Register Write to Reg: 0x16 Val: 0x0000452F
+[inst #23] add x23,x21,x22
+Register Write to Reg: 0x17 Val: 0x00006FF1
+[inst #24] add x24,x22,x23
+Register Write to Reg: 0x18 Val: 0x0000B520
+[inst #25] add x25,x23,x24
+Register Write to Reg: 0x19 Val: 0x00012511
+[inst #26] add x26,x24,x25
+Register Write to Reg: 0x1A Val: 0x0001DA31
+[inst #27] add x27,x25,x26
+Register Write to Reg: 0x1B Val: 0x0002FF42
+[inst #28] add x28,x26,x27
+Register Write to Reg: 0x1C Val: 0x0004D973
+[inst #29] add x29,x27,x28
+Register Write to Reg: 0x1D Val: 0x0007D8B5
+[inst #30] add x30,x28,x29
+Register Write to Reg: 0x1E Val: 0x000CB228
+[inst #31] add x31,x29,x30
+Register Write to Reg: 0x1F Val: 0x00148ADD
+[inst #32] wfi 
+
+Program terminated by dropping off the bottom.

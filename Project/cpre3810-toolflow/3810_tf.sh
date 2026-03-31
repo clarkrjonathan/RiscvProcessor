@@ -38,7 +38,9 @@ fi
 
 if [ "$1" == "new" ]; then
     if [ -d "proj" ]; then
+	export SALT_LICENSE_SERVER=1717@io.ece.iastate.edu
         echo -e "${RED}Projet already exists, trying moving your extiing project using the 'mov' *nix command${NC}"
+	
     else
         mkdir -p "proj"
         mkdir -p "proj/src"

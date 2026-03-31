@@ -1,0 +1,1522 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 linux_x86_64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+cd /home/jclark15/cpre381/testModules
+cd /home/jclark15/cpre381/testModules
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Optimization canceled
+vlib work
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:46:34 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): /home/jclark15/cpre381/testModules/mux4t1_N.vhd(1): (vcom-1491) Empty source files.
+# End time: 01:46:34 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:46:58 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): /home/jclark15/cpre381/testModules/mux4t1_N.vhd(1): (vcom-1491) Empty source files.
+# End time: 01:46:58 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:48:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): Labels do not match: 'mux4t1_N' and 'mux2t1_N'.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): VHDL Compiler exiting
+# End time: 01:48:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:48:50 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): Labels do not match: 'mux4t1_N' and 'mux2t1_N'.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): VHDL Compiler exiting
+# End time: 01:48:50 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:48:50 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): Labels do not match: 'mux4t1_N' and 'mux2t1_N'.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): VHDL Compiler exiting
+# End time: 01:48:50 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:49:05 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): Labels do not match: 'mux4t1_N' and 'mux2t1_N'.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(16): VHDL Compiler exiting
+# End time: 01:49:05 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:49:36 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# ** Error: (vcom-11) Could not find work.mux2t1_n.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(18): VHDL Compiler exiting
+# End time: 01:49:36 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:50:16 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(21): (vcom-1441) CONDITIONAL EXPRESSION is not defined for this version of the language.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(21): VHDL Compiler exiting
+# End time: 01:50:16 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:50:45 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(21): (vcom-1441) CONDITIONAL EXPRESSION is not defined for this version of the language.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(21): VHDL Compiler exiting
+# End time: 01:50:45 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:52:35 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(25): (vcom-1441) CONDITIONAL EXPRESSION is not defined for this version of the language.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(25): VHDL Compiler exiting
+# End time: 01:52:35 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:52:55 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(25): (vcom-1441) CONDITIONAL EXPRESSION is not defined for this version of the language.
+# ** Note: /home/jclark15/cpre381/testModules/mux4t1_N.vhd(25): VHDL Compiler exiting
+# End time: 01:52:55 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:55:17 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: /home/jclark15/cpre381/testModules/mux2t1_N.vhd(4): (vcom-1615) Existing entity 'mux4t1_N' at /home/jclark15/cpre381/testModules/mux4t1_N.vhd(4) will be overwritten.
+# -- Compiling entity mux4t1_N
+# ** Error: /home/jclark15/cpre381/testModules/mux2t1_N.vhd(14): Labels do not match: 'mux4t1_N' and 'mux2t1_N'.
+# ** Note: /home/jclark15/cpre381/testModules/mux2t1_N.vhd(14): VHDL Compiler exiting
+# End time: 01:55:18 on Mar 27,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:55:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 01:55:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:56:09 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 01:56:09 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:56:14 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 01:56:14 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 01:57:17 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 01:57:17 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mux4t1_n
+# vsim work.mux4t1_n 
+# Start time: 01:57:37 on Mar 27,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/mux4t1_n/s_Mux2 \
+sim:/mux4t1_n/s_Mux1 \
+sim:/mux4t1_n/o_O \
+sim:/mux4t1_n/N \
+sim:/mux4t1_n/i_S \
+sim:/mux4t1_n/i_D3 \
+sim:/mux4t1_n/i_D2 \
+sim:/mux4t1_n/i_D1 \
+sim:/mux4t1_n/i_D0
+force -freeze sim:/mux4t1_n/i_D3 16'h3333 0
+force -freeze sim:/mux4t1_n/i_D2 16'h2222 0
+force -freeze sim:/mux4t1_n/i_D1 16'h1111 0
+force -freeze sim:/mux4t1_n/i_D0 16'h0000 0
+force -freeze sim:/mux4t1_n/i_S 2'h0 0
+run 100
+force -freeze sim:/mux4t1_n/i_S 2'h1 0
+force -freeze sim:/mux4t1_n/i_S 2'h1 0
+run 100
+force -freeze sim:/mux4t1_n/i_S 2'h2 0
+run 100
+quit -sim
+# End time: 02:00:05 on Mar 27,2026, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:00:10 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:00:10 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:00:16 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/testModules/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:00:16 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mux4t1_n
+# vsim work.mux4t1_n 
+# Start time: 02:00:24 on Mar 27,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/mux4t1_n/o_O \
+sim:/mux4t1_n/N \
+sim:/mux4t1_n/i_S \
+sim:/mux4t1_n/i_D3 \
+sim:/mux4t1_n/i_D2 \
+sim:/mux4t1_n/i_D1 \
+sim:/mux4t1_n/i_D0
+force -freeze sim:/mux4t1_n/i_D3 16'h3333 0
+force -freeze sim:/mux4t1_n/i_D2 16'h2222 0
+force -freeze sim:/mux4t1_n/i_D1 16'h1111 0
+force -freeze sim:/mux4t1_n/i_D0 16'h0000 0
+run 100
+force -freeze sim:/mux4t1_n/i_S 2'h0 0
+run 10
+force -freeze sim:/mux4t1_n/i_S 2'h1 0
+run 1000
+force -freeze sim:/mux4t1_n/i_S 2'h2 0
+run 100
+force -freeze sim:/mux4t1_n/i_S 2'h3 0
+run 100
+quit -sim
+# End time: 02:38:16 on Mar 27,2026, Elapsed time: 0:37:52
+# Errors: 0, Warnings: 0
+cd /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel
+# reading /usr/local/mentor/questasim/linux_x86_64/../modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+# Modified modelsim.ini
+vlib work
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(8): VHDL Compiler exiting
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(8): VHDL Compiler exiting
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(8): VHDL Compiler exiting
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(26): VHDL Compiler exiting
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:38:54 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 02:38:54 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(8): VHDL Compiler exiting
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(8): VHDL Compiler exiting
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(8): VHDL Compiler exiting
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(26): VHDL Compiler exiting
+# End time: 02:39:49 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:49 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 02:39:50 on Mar 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:39:50 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 02:39:50 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+cd /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src
+# reading /usr/local/mentor/questasim/linux_x86_64/../modelsim.ini
+vlib work
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/RISCV_types.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:24 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/RISCV_types.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package RISCV_types
+# -- Compiling package body RISCV_types
+# -- Loading package RISCV_types
+# End time: 02:40:24 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:30 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity ALU
+# -- Compiling architecture structure of ALU
+# End time: 02:40:30 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:30 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 02:40:30 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:30 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 02:40:30 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity immGen
+# -- Compiling architecture structure of immGen
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:31 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity RISCV_Processor
+# -- Compiling architecture structure of RISCV_Processor
+# End time: 02:40:31 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity ALU
+# -- Compiling architecture structure of ALU
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity immGen
+# -- Compiling architecture structure of immGen
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 02:40:39 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity RISCV_Processor
+# -- Compiling architecture structure of RISCV_Processor
+# End time: 02:40:39 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.riscv_processor
+# vsim work.riscv_processor 
+# Start time: 02:40:48 on Mar 27,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(63): (vopt-3473) Component instance "DECODER : decoder5to32" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(95): (vopt-3473) Component instance "MUX_RS1 : mux_32to1_32bit" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(118): (vopt-3473) Component instance "MUX_RS2 : mux_32to1_32bit" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(411): (vopt-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(423): (vopt-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(449): (vopt-3473) Component instance "ByteModule : byteMd" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(473): (vopt-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(37): (vopt-3473) Component instance "Adder : adder_N" is not bound.
+#         Region: /RISCV_Processor/RISCVALU
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.riscv_processor(structure)#1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/DMem File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/DMem
+# ** Warning: (vsim-3473) Component instance "DECODER : decoder5to32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# Loading work.reg_n(structural)#1
+# ** Warning: (vsim-3473) Component instance "MUX_RS1 : mux_32to1_32bit" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# ** Warning: (vsim-3473) Component instance "MUX_RS2 : mux_32to1_32bit" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# ** Warning: (vsim-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ByteModule : byteMd" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "Adder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RISCVALU File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+force -freeze sim:/riscv_processor/iRST 1 0
+run 10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/IMem
+run 1000
+force -freeze sim:/riscv_processor/iRST 1 0
+add wave -position insertpoint  \
+sim:/riscv_processor/s_WRBCKSEL \
+sim:/riscv_processor/s_RS2Data \
+sim:/riscv_processor/s_RS1Data \
+sim:/riscv_processor/s_RS1_PC \
+sim:/riscv_processor/s_RegWrData \
+sim:/riscv_processor/s_RegWrAddr \
+sim:/riscv_processor/s_RegWr \
+sim:/riscv_processor/s_PCFetch \
+sim:/riscv_processor/s_PC \
+sim:/riscv_processor/s_Inst \
+sim:/riscv_processor/s_IncPC \
+sim:/riscv_processor/s_Imm \
+sim:/riscv_processor/s_IMemAddr \
+sim:/riscv_processor/s_Halt \
+sim:/riscv_processor/s_DMemWr \
+sim:/riscv_processor/s_DMemOut \
+sim:/riscv_processor/s_DMemData \
+sim:/riscv_processor/s_DMemAddr \
+sim:/riscv_processor/s_byteOut \
+sim:/riscv_processor/s_BranchJumpAdded \
+sim:/riscv_processor/s_BranchJump \
+sim:/riscv_processor/s_B \
+sim:/riscv_processor/s_ALUZero \
+sim:/riscv_processor/s_ALUOut \
+sim:/riscv_processor/s_ALUCTL \
+sim:/riscv_processor/oALUOut \
+sim:/riscv_processor/N \
+sim:/riscv_processor/iRST \
+sim:/riscv_processor/iInstLd \
+sim:/riscv_processor/iInstExt \
+sim:/riscv_processor/iInstAddr \
+sim:/riscv_processor/iCLK
+force -freeze sim:/riscv_processor/iRST 1 0
+run 10
+force -freeze sim:/riscv_processor/s_Inst 32'h00100093 0
+run 10
+force -freeze sim:/riscv_processor/iCLK 1 0
+run 10
+# Optimization canceled
+quit -sim
+# End time: 02:47:31 on Mar 27,2026, Elapsed time: 0:06:43
+# Errors: 0, Warnings: 19
+vsim -voptargs=+acc work.riscv_processor
+# vsim -voptargs="+acc" work.riscv_processor 
+# Start time: 02:50:05 on Mar 27,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(63): (vopt-3473) Component instance "DECODER : decoder5to32" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(95): (vopt-3473) Component instance "MUX_RS1 : mux_32to1_32bit" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(118): (vopt-3473) Component instance "MUX_RS2 : mux_32to1_32bit" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(411): (vopt-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(423): (vopt-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(449): (vopt-3473) Component instance "ByteModule : byteMd" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(473): (vopt-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(37): (vopt-3473) Component instance "Adder : adder_N" is not bound.
+#         Region: /RISCV_Processor/RISCVALU
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.riscv_processor(structure)#1
+# Loading work.mem(rtl)#1
+# Loading work.control(structure)#1
+# Loading work.mux4t1_n(dataflow)#1
+# Loading work.regfile(structural)#1
+# ** Warning: (vsim-3473) Component instance "DECODER : decoder5to32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# Loading work.reg_n(structural)#1
+# Loading work.dffg(mixed)#1
+# ** Warning: (vsim-3473) Component instance "MUX_RS1 : mux_32to1_32bit" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# ** Warning: (vsim-3473) Component instance "MUX_RS2 : mux_32to1_32bit" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# Loading work.mux2t1_n(dataflow)#1
+# ** Warning: (vsim-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ByteModule : byteMd" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# Loading work.alu(structure)#1
+# ** Warning: (vsim-3473) Component instance "Adder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RISCVALU File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# Loading work.immgen(structure)#1
+# ** Warning: (vsim-8684) No drivers exist on out port /riscv_processor/RegisterFile/o_RD_DATA1, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /riscv_processor/s_RS1Data.
+# ** Warning: (vsim-8684) No drivers exist on out port /riscv_processor/RegisterFile/o_RD_DATA2, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /riscv_processor/s_RS2Data.
+# ** Warning: (vsim-8683) Uninitialized out port /riscv_processor/RISCVALU/o_Zero has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8684) No drivers exist on out port /riscv_processor/RISCVALU/o_Output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /riscv_processor/s_ALUOut.
+force -freeze sim:/riscv_processor/RegisterFile/i_RST 1 0
+add wave -position insertpoint  \
+sim:/riscv_processor/s_WRBCKSEL \
+sim:/riscv_processor/s_RS2Data \
+sim:/riscv_processor/s_RS1Data \
+sim:/riscv_processor/s_RS1_PC \
+sim:/riscv_processor/s_RegWrData \
+sim:/riscv_processor/s_RegWrAddr \
+sim:/riscv_processor/s_RegWr \
+sim:/riscv_processor/s_PCFetch \
+sim:/riscv_processor/s_PC \
+sim:/riscv_processor/s_Ovfl \
+sim:/riscv_processor/s_MemWrSrc \
+sim:/riscv_processor/s_jump \
+sim:/riscv_processor/s_jalr \
+sim:/riscv_processor/s_Inst \
+sim:/riscv_processor/s_IncPC \
+sim:/riscv_processor/s_Imm \
+sim:/riscv_processor/s_IMemAddr \
+sim:/riscv_processor/s_Halt \
+sim:/riscv_processor/s_DMemWr \
+sim:/riscv_processor/s_DMemOut \
+sim:/riscv_processor/s_DMemData \
+sim:/riscv_processor/s_DMemAddr \
+sim:/riscv_processor/s_byteOut \
+sim:/riscv_processor/s_byteOp \
+sim:/riscv_processor/s_BranchJumpAdded \
+sim:/riscv_processor/s_BranchJump \
+sim:/riscv_processor/s_branch \
+sim:/riscv_processor/s_B \
+sim:/riscv_processor/s_ALUZero \
+sim:/riscv_processor/s_ALUSrc \
+sim:/riscv_processor/s_ALUOut \
+sim:/riscv_processor/s_ALUOp \
+sim:/riscv_processor/s_ALUCTL \
+sim:/riscv_processor/oALUOut \
+sim:/riscv_processor/N \
+sim:/riscv_processor/iRST \
+sim:/riscv_processor/iInstLd \
+sim:/riscv_processor/iInstExt \
+sim:/riscv_processor/iInstAddr \
+sim:/riscv_processor/iCLK
+force -freeze sim:/riscv_processor/s_WRBCKSEL 2'h00100093 0
+force -freeze sim:/riscv_processor/s_Inst 32'h00100093 0
+run 10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/DMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/IMem
+force -freeze sim:/riscv_processor/iCLK 1 0
+run 10
+force -freeze sim:/riscv_processor/iCLK 0 0
+run 10
+force -freeze sim:/riscv_processor/iCLK 1 0
+run 10
+add wave -position insertpoint sim:/riscv_processor/RegisterFile/GEN_REGS(2)/*
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/riscv_processor/RegisterFile/GEN_REGS(2)/*'.
+add wave -position insertpoint sim:/riscv_processor/RegisterFile/GEN_REGS(2)/REG_I/GEN_REG(0)/DFFI/*
+run 10
+quit -sim
+# End time: 03:00:59 on Mar 27,2026, Elapsed time: 0:10:54
+# Errors: 0, Warnings: 23, Suppressed Warnings: 1
+# Load canceled
+# Modified modelsim.ini
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity ALU
+# -- Compiling architecture structure of ALU
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity immGen
+# -- Compiling architecture structure of immGen
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux_32to1_32bit.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux_32to1_32bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_32to1_32bit
+# -- Compiling architecture dataflow of mux_32to1_32bit
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 03:01:23 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:23 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 03:01:24 on Mar 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:01:24 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity RISCV_Processor
+# -- Compiling architecture structure of RISCV_Processor
+# End time: 03:01:24 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.riscv_processor
+# vsim -voptargs="+acc" work.riscv_processor 
+# Start time: 03:01:36 on Mar 27,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd(63): (vopt-3473) Component instance "DECODER : decoder5to32" is not bound.
+#         Region: /RISCV_Processor/RegisterFile
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(411): (vopt-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(423): (vopt-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(449): (vopt-3473) Component instance "ByteModule : byteMd" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(473): (vopt-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#         Region: /RISCV_Processor
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(37): (vopt-3473) Component instance "Adder : adder_N" is not bound.
+#         Region: /RISCV_Processor/RISCVALU
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=7.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.riscv_processor(structure)#1
+# Loading work.mem(rtl)#1
+# Loading work.control(structure)#1
+# Loading work.mux4t1_n(dataflow)#1
+# Loading work.regfile(structural)#1
+# ** Warning: (vsim-3473) Component instance "DECODER : decoder5to32" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RegisterFile File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# Loading work.reg_n(structural)#1
+# Loading work.dffg(mixed)#1
+# Loading work.mux_32to1_32bit(dataflow)#1
+# Loading work.mux2t1_n(dataflow)#1
+# ** Warning: (vsim-3473) Component instance "PCIncAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "BranchJumpAdder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ByteModule : byteMd" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# ** Warning: (vsim-3473) Component instance "ALUControl : ALUCtl" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# Loading work.alu(structure)#1
+# ** Warning: (vsim-3473) Component instance "Adder : adder_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/RISCVALU File: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# Loading work.immgen(structure)#1
+# ** Warning: (vsim-8683) Uninitialized out port /riscv_processor/RISCVALU/o_Zero has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8684) No drivers exist on out port /riscv_processor/RISCVALU/o_Output, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /riscv_processor/s_ALUOut.
+add wave -position insertpoint  \
+sim:/riscv_processor/s_WRBCKSEL \
+sim:/riscv_processor/s_RS2Data \
+sim:/riscv_processor/s_RS1Data \
+sim:/riscv_processor/s_RS1_PC \
+sim:/riscv_processor/s_RegWrData \
+sim:/riscv_processor/s_RegWrAddr \
+sim:/riscv_processor/s_RegWr \
+sim:/riscv_processor/s_PCFetch \
+sim:/riscv_processor/s_PC \
+sim:/riscv_processor/s_Ovfl \
+sim:/riscv_processor/s_MemWrSrc \
+sim:/riscv_processor/s_jump \
+sim:/riscv_processor/s_jalr \
+sim:/riscv_processor/s_Inst \
+sim:/riscv_processor/s_IncPC \
+sim:/riscv_processor/s_Imm \
+sim:/riscv_processor/s_IMemAddr \
+sim:/riscv_processor/s_Halt \
+sim:/riscv_processor/s_DMemWr \
+sim:/riscv_processor/s_DMemOut \
+sim:/riscv_processor/s_DMemData \
+sim:/riscv_processor/s_DMemAddr \
+sim:/riscv_processor/s_byteOut \
+sim:/riscv_processor/s_byteOp \
+sim:/riscv_processor/s_BranchJumpAdded \
+sim:/riscv_processor/s_BranchJump \
+sim:/riscv_processor/s_branch \
+sim:/riscv_processor/s_B \
+sim:/riscv_processor/s_ALUZero \
+sim:/riscv_processor/s_ALUSrc \
+sim:/riscv_processor/s_ALUOut \
+sim:/riscv_processor/s_ALUOp \
+sim:/riscv_processor/s_ALUCTL \
+sim:/riscv_processor/oALUOut \
+sim:/riscv_processor/N \
+sim:/riscv_processor/iRST \
+sim:/riscv_processor/iInstLd \
+sim:/riscv_processor/iInstExt \
+sim:/riscv_processor/iInstAddr \
+sim:/riscv_processor/iCLK
+force -freeze sim:/riscv_processor/iRST 1 0
+force -freeze sim:/riscv_processor/iCLK 0 0
+force -freeze sim:/riscv_processor/s_Inst 32'h00100093 0
+run 10
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/DMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /riscv_processor/IMem
+quit -sim
+# End time: 03:05:44 on Mar 27,2026, Elapsed time: 0:04:08
+# Errors: 0, Warnings: 17
+# Load canceled
+vlib work
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:58 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd(8): VHDL Compiler exiting
+# End time: 03:05:58 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:58 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd(8): VHDL Compiler exiting
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(24): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd(26): VHDL Compiler exiting
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:05:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.riscv_types.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): (vcom-1195) Cannot find expanded name "work.RISCV_types".
+# ** Error: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(6): Unknown expanded name.
+# ** Note: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd(8): VHDL Compiler exiting
+# End time: 03:05:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+cd /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src
+# reading modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/RISCV_types.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:37 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/RISCV_types.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package RISCV_types
+# -- Compiling package body RISCV_types
+# -- Loading package RISCV_types
+# End time: 03:06:37 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+cd /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src
+# reading modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity ALU
+# -- Compiling architecture structure of ALU
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity control
+# -- Compiling architecture structure of control
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dffg
+# -- Compiling architecture mixed of dffg
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_N
+# -- Compiling architecture structural of reg_N
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity regfile
+# -- Compiling architecture structural of regfile
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity RISCV_Processor
+# -- Compiling architecture structure of RISCV_Processor
+# End time: 03:06:59 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:06:59 on Mar 27,2026
+# vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4t1_N
+# -- Compiling architecture dataflow of mux4t1_N
+# End time: 03:07:00 on Mar 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:07:00 on Mar 27,2026
+# vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture rtl of mem
+# End time: 03:07:00 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:07:00 on Mar 27,2026
+# vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mux2t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2t1_N
+# -- Compiling architecture dataflow of mux2t1_N
+# End time: 03:07:00 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 03:07:00 on Mar 27,2026
+# vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity immGen
+# -- Compiling architecture structure of immGen
+# End time: 03:07:00 on Mar 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

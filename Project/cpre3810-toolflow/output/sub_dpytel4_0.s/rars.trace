@@ -1,0 +1,15 @@
+[inst #1] lui x5,524288
+Register Write to Reg: 0x05 Val: 0x80000000
+[inst #2] addi x6,x0,1
+Register Write to Reg: 0x06 Val: 0x00000001
+[inst #3] sub x7,x6,x5
+Register Write to Reg: 0x07 Val: 0x80000001
+[inst #4] sub x28,x5,x6
+Register Write to Reg: 0x1C Val: 0x7FFFFFFF
+[inst #5] sub x29,x6,x6
+Register Write to Reg: 0x1D Val: 0x00000000
+[inst #6] sub x30,x5,x5
+Register Write to Reg: 0x1E Val: 0x00000000
+[inst #7] wfi 
+
+Program terminated by dropping off the bottom.
