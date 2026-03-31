@@ -149,6 +149,7 @@ architecture structure of RISCV_Processor is
     component byteMd is
     		port(
 		i_ByteOp	: in std_logic_vector(BYTE_OP_WIDTH - 1 downto 0);
+		i_ByteAddr : in	std_logic_vector(1 downto 0);
 		i_mem		: in std_logic_vector(DATA_WIDTH - 1 downto 0);
 		i_RS2		: in std_logic_vector(DATA_WIDTH - 1 downto 0);
 		o_ByteOut	: out std_logic_vector(DATA_WIDTH - 1 downto 0)
@@ -477,6 +478,7 @@ begin
   	ByteModule: byteMd
   	port map(
   		i_ByteOp	=> s_byteOp,
+  		i_ByteAddr	=> s_DMemAddr(1 downto 0),
   		i_mem		=> s_DMemOut,
   		i_RS2		=> s_RS2Data,
   		o_ByteOut	=> s_byteOut

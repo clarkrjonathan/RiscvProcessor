@@ -26,6 +26,7 @@ vsim:/tb/MyRiscv/s_RegWrData \
 vsim:/tb/MyRiscv/s_RegWrAddr \
 vsim:/tb/MyRiscv/s_RegWr \
 vsim:/tb/MyRiscv/s_PCWriteBack \
+vsim:/tb/MyRiscv/s_PCNext \
 vsim:/tb/MyRiscv/s_PCFetch \
 vsim:/tb/MyRiscv/s_PC \
 vsim:/tb/MyRiscv/s_Ovfl \
@@ -40,6 +41,7 @@ vsim:/tb/MyRiscv/s_DMemWr \
 vsim:/tb/MyRiscv/s_DMemOut \
 vsim:/tb/MyRiscv/s_DMemData \
 vsim:/tb/MyRiscv/s_DMemAddr \
+vsim:/tb/MyRiscv/s_CondMet \
 vsim:/tb/MyRiscv/s_byteOut \
 vsim:/tb/MyRiscv/s_byteOp \
 vsim:/tb/MyRiscv/s_BranchJumpAdded \
@@ -58,3 +60,11 @@ vsim:/tb/MyRiscv/iInstLd \
 vsim:/tb/MyRiscv/iInstExt \
 vsim:/tb/MyRiscv/iInstAddr \
 vsim:/tb/MyRiscv/iCLK
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ByteModule/s_SelectedRegHalfword \
+vsim:/tb/MyRiscv/ByteModule/s_SelectedRegByte \
+vsim:/tb/MyRiscv/ByteModule/o_ByteOut \
+vsim:/tb/MyRiscv/ByteModule/i_RS2 \
+vsim:/tb/MyRiscv/ByteModule/i_mem \
+vsim:/tb/MyRiscv/ByteModule/i_ByteOp \
+vsim:/tb/MyRiscv/ByteModule/i_ByteAddr
