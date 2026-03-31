@@ -140,6 +140,10 @@ architecture structure of ALU is
     
     signal s_SLTSigned		: std_logic;
     
+    	signal s_BNegAPos	: std_logic;
+	signal s_invBNegAPos	: std_logic;
+	signal s_OvrflANegBPos	: std_logic;
+    
     
 	
 begin
@@ -217,9 +221,26 @@ begin
     		port map(
     			i_A	=> s_ANegBPos,
     			i_B	=> s_AddSub(31),
-    			o_F	=> s_SLTSigned
+    			o_F	=> s_OvrflANegBPos
     			);
+    	--We also want to bypass in the opposite case eg B is negative
 	
+	BnegApos: andg2
+		port map(
+			i_A	=> i_B(31),
+			i_B	=> s_AxorBsign,
+			o_F	=> s_BNegAPos
+			);
+			
+	s_invBNegAPos	<= not s_BNegAPos;
+			
+	OverFlowCorrected: andg2
+		port map(
+			i_A	=> s_OvrflANegBPos,
+			i_B	=> s_invBNegAPos,
+			o_F	=> s_SLTSigned
+			);
+
 
     ------------------------------------------------------------------------
     --Logic Unit

@@ -1,0 +1,45 @@
+
+#
+# CprE 381 Generated Quartus Settings File
+#
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:07:08  JANUARY 28, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name TOP_LEVEL_ENTITY RISCV_Processor
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/RISCV_types.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALU.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/ALUCtl.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Adder/adder_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Adder/fa.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Adder_Subtractor_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Dataflow/decoder_5to32.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Dataflow/mux2t1_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Dataflow/mux4t1_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Dataflow/mux_32to1_32bit.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/andg2.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/andg_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/inv_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/invg.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/org2.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/org_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/xorg2.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/Gates/xorg_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/RISCV_Processor.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/barrelShifter.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/bit_extender12_32.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/byteMd.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/control.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/dffg.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/immGen.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/logicUnit.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/mem.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/reg_N.vhd"
+set_global_assignment -name VHDL_FILE "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/src/TopLevel/regfile.vhd"
