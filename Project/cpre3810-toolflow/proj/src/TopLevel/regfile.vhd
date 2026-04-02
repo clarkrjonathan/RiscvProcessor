@@ -57,6 +57,7 @@ architecture structural of regfile is
   -- Internal signals
   signal s_reg_write_en : std_logic_vector(31 downto 0);  -- Individual write enables
   signal s_reg_data : reg_array;  -- Register outputs
+  signal s_SpWriteEnable : std_logic;
   
 begin
   
@@ -74,23 +75,43 @@ begin
     port map(
       i_CLK => i_CLK,
       i_RST => '1',              -- Always in reset to maintain zero
-      i_WE  => '0',              -- Never write
+      i_WE  => '1',              -- Never write
       i_D   => (others => '0'),
       o_Q   => s_reg_data(0)
     );
+    
+    s_SpWriteEnable <= s_reg_write_en(2) when i_RST = '0' else '1';
   
-  -- Registers 1-31: Normal registers
-  GEN_REGS: for i in 1 to 31 generate
-    REG_I: reg_N
-      generic map(N => 32)
-      port map(
-        i_CLK => i_CLK,
-        i_RST => i_RST,
-        i_WE  => s_reg_write_en(i),
-        i_D   => i_WR_DATA,
-        o_Q   => s_reg_data(i)
-      );
-  end generate GEN_REGS;
+	GEN_REGS: for i in 1 to 31 generate
+
+	    REG_SP: if i = 2 generate
+		REG_I: reg_N
+		    generic map(
+		        N       => 32,
+		        RST_VAL => x"7FFFEFFC"
+		    )
+		    port map(
+		        i_CLK => i_CLK,
+		        i_RST => i_RST,
+		        i_WE  => s_SpWriteEnable,
+		        i_D   => i_WR_DATA,
+		        o_Q   => s_reg_data(i)
+		    );
+	    end generate REG_SP;
+
+	    REG_NORMAL: if i /= 2 generate
+		REG_I: reg_N
+		    generic map(N => 32)
+		    port map(
+		        i_CLK => i_CLK,
+		        i_RST => i_RST,
+		        i_WE  => s_reg_write_en(i),
+		        i_D   => i_WR_DATA,
+		        o_Q   => s_reg_data(i)
+		    );
+	    end generate REG_NORMAL;
+
+	end generate GEN_REGS;
   
   -- Read Port 1: Mux for rs1
   MUX_RS1: mux_32to1_32bit

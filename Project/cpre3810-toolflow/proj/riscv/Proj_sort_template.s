@@ -10,7 +10,6 @@ temp: .space 2048
 
 main:
     # save ra
-    addi sp, x0, 0
     addi sp, sp, -4
     sw ra, 0(sp)
 
@@ -25,6 +24,8 @@ main:
     # end
     li a7, 10
     ecall
+    
+    wfi
 
 
 # ---------------------------------------------------------
@@ -205,3 +206,4 @@ sort_done:
     lw ra, 32(sp)
     addi sp, sp, 36
     jr ra
+

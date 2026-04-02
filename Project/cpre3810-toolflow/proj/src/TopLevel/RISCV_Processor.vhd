@@ -39,7 +39,7 @@ architecture structure of RISCV_Processor is
 
   -- Required data memory signals
   signal s_DMemWr       : std_logic; -- TODO: use this signal as the final active high data memory write enable signal
-  signal s_DMemAddr     : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the final data memory address input
+  signal s_DMemAddr     : std_logic_vector(N-1 downto 0); -- TODO: use ths_IMemAddris signal as the final data memory address input
   signal s_DMemData     : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the final data memory data input
   signal s_DMemOut      : std_logic_vector(N-1 downto 0); -- TODO: use this signal as the data memory output
  
@@ -98,7 +98,8 @@ architecture structure of RISCV_Processor is
     -- DFLIP FLOP REG (For Program counter)
     ------------------------------------------------------------------------ 
     component reg_N is
-  	generic(N : integer := DATA_WIDTH);  -- width of register
+  	generic(N : integer := DATA_WIDTH;
+  		RST_VAL	:	std_logic_vector(N-1 downto 0) := (others => '0'));  -- width of register
   		port(
     		i_CLK : in  std_logic;     -- clock
     		i_RST : in  std_logic;     -- reset
@@ -459,15 +460,17 @@ begin
   -------------------------------------------------------------------------------------------------------------------
   --PROGRAM COUNTER  -Register that holds and updates the program address
   -------------------------------------------------------------------------------------------------------------------
-  	s_PCNext <= x"00400000" when iRST = '1' else s_PCFetch;
   	
   	ProgramCounter: reg_N
-  	generic map(N => DATA_WIDTH)
+  	generic map(
+		        N       => 32,
+		        RST_VAL => x"00400000"
+		    )
   	port map(
   		i_CLK		=> iCLK,
-  		i_RST		=> '0', --PCNext signal handles resets
+  		i_RST		=> iRST,
   		i_WE		=> '1', --Single cycle, it writes when the clock is enabled
-  		i_D		=> s_PCNext,
+  		i_D		=> s_PCFetch,
   		o_Q		=> s_PC
   		);
   

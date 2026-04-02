@@ -18,6 +18,7 @@ architecture structural of reg_N is
 
   -- Component declaration for dffg
   component dffg is
+  generic(RST_VAL	: std_logic);
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
@@ -27,20 +28,21 @@ architecture structural of reg_N is
     );
   end component;
   
-  signal s_RegValue	:	std_logic_vector(N-1 downto 0);
+
 
 begin
 
-	s_RegValue	<= RST_VAL when i_RST	= '1' else i_D;
+
 
   -- Generate N flip-flops
   GEN_REG: for i in 0 to N-1 generate
     DFFI: dffg
+    	generic map(RST_VAL	=> RST_VAL(i))
       port map(
         i_CLK => i_CLK,
         i_RST => i_RST,
         i_WE  => i_WE,
-        i_D   => s_RegValue(i),
+        i_D   => i_D(i),
         o_Q   => o_Q(i)
       );
   end generate GEN_REG;
