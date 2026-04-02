@@ -18,53 +18,6 @@ vsim:/tb/reset \
 vsim:/tb/CLK \
 vsim:/tb/alu_out
 add wave -position insertpoint  \
-vsim:/tb/MyRiscv/s_WRBCKSEL \
-vsim:/tb/MyRiscv/s_RS2Data \
-vsim:/tb/MyRiscv/s_RS1Data \
-vsim:/tb/MyRiscv/s_RS1_PC \
-vsim:/tb/MyRiscv/s_RegWrData \
-vsim:/tb/MyRiscv/s_RegWrAddr \
-vsim:/tb/MyRiscv/s_RegWr \
-vsim:/tb/MyRiscv/s_PCWriteBack \
-vsim:/tb/MyRiscv/s_PCNext \
-vsim:/tb/MyRiscv/s_PCFetch \
-vsim:/tb/MyRiscv/s_PC \
-vsim:/tb/MyRiscv/s_Ovfl \
-vsim:/tb/MyRiscv/s_jump \
-vsim:/tb/MyRiscv/s_jalr \
-vsim:/tb/MyRiscv/s_Inst \
-vsim:/tb/MyRiscv/s_IncPC \
-vsim:/tb/MyRiscv/s_Imm \
-vsim:/tb/MyRiscv/s_IMemAddr \
-vsim:/tb/MyRiscv/s_Halt \
-vsim:/tb/MyRiscv/s_DMemWr \
-vsim:/tb/MyRiscv/s_DMemOut \
-vsim:/tb/MyRiscv/s_DMemData \
-vsim:/tb/MyRiscv/s_DMemAddr \
-vsim:/tb/MyRiscv/s_CondMet \
-vsim:/tb/MyRiscv/s_byteOut \
-vsim:/tb/MyRiscv/s_byteOp \
-vsim:/tb/MyRiscv/s_BranchJumpAdded \
-vsim:/tb/MyRiscv/s_BranchJump \
-vsim:/tb/MyRiscv/s_branch \
-vsim:/tb/MyRiscv/s_B \
-vsim:/tb/MyRiscv/s_AUIPC \
-vsim:/tb/MyRiscv/s_ALUZero \
-vsim:/tb/MyRiscv/s_ALUSrc \
-vsim:/tb/MyRiscv/s_ALUOut \
-vsim:/tb/MyRiscv/s_ALUOp \
-vsim:/tb/MyRiscv/s_ALUCTL \
-vsim:/tb/MyRiscv/oALUOut \
-vsim:/tb/MyRiscv/iRST \
-vsim:/tb/MyRiscv/iInstLd \
-vsim:/tb/MyRiscv/iInstExt \
-vsim:/tb/MyRiscv/iInstAddr \
-vsim:/tb/MyRiscv/iCLK
+vsim:/tb/MyRiscv/RegisterFile/s_reg_data
 add wave -position insertpoint  \
-vsim:/tb/MyRiscv/ByteModule/s_SelectedRegHalfword \
-vsim:/tb/MyRiscv/ByteModule/s_SelectedRegByte \
-vsim:/tb/MyRiscv/ByteModule/o_ByteOut \
-vsim:/tb/MyRiscv/ByteModule/i_RS2 \
-vsim:/tb/MyRiscv/ByteModule/i_mem \
-vsim:/tb/MyRiscv/ByteModule/i_ByteOp \
-vsim:/tb/MyRiscv/ByteModule/i_ByteAddr
+vsim:/tb/MyRiscv/RegisterFile/REG_0/s_RegValue

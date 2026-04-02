@@ -19,7 +19,8 @@ architecture structural of regfile is
   
   -- Component: N-bit register
   component reg_N
-    generic(N : integer := 32);
+    generic(N : integer := 32;
+    	    RST_VAL	:	std_logic_vector(N-1 downto 0) := (others => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
