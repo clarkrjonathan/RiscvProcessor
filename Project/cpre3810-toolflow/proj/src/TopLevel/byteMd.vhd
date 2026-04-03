@@ -43,18 +43,20 @@ begin
 
 	o_ByteOut 		<=
 		-- STORES (bit 3 = 0, operate on i_RS2)
-		-- sb: replace bottom byte, keep rest of mem
+		-- sb: byte 0
 		i_mem(31 downto 8) & i_RS2(7 downto 0)
-		    when i_ByteOp = "0000" else
-		-- sbu: same as sb, unsigned doesn't matter for writes
-		i_mem(31 downto 8) & i_RS2(7 downto 0)
-		    when i_ByteOp = "0001" else
-		-- sh: replace bottom halfword, keep rest of mem
-		i_mem(31 downto 16) & i_RS2(15 downto 0)
-		    when i_ByteOp = "0010" else
-		-- shu: same as sh
-		i_mem(31 downto 16) & i_RS2(15 downto 0)
-		    when i_ByteOp = "0011" else
+		    when (i_ByteOp = "0000" and i_ByteAddr = "00") else
+		-- sb: byte 1
+		i_mem(31 downto 16) & i_RS2(7 downto 0) & i_mem(7 downto 0)
+		    when (i_ByteOp = "0000" and i_ByteAddr = "01") else
+		-- sb: byte 2
+		i_mem(31 downto 24) & i_RS2(7 downto 0) & i_mem(15 downto 0)
+		    when (i_ByteOp = "0000" and i_ByteAddr = "10") else
+		-- sb: byte 3
+		i_RS2(7 downto 0) & i_mem(23 downto 0)
+		    when (i_ByteOp = "0000" and i_ByteAddr = "11") else
+		    
+		    
 		-- sw: full RS1 replaces mem entirely
 		i_RS2
 		    when i_ByteOp = "0100" else
