@@ -1,5 +1,5 @@
 QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
-Start time: 00:49:08 on Apr 03,2026
+Start time: 22:59:12 on Apr 04,2026
 vcom -2008 -work internal/ModelSimContainer/work proj/src/RISCV_types.vhd internal/testpy/tb.vhd proj/src/RISCV_types.vhd proj/src/TopLevel/ALU.vhd proj/src/TopLevel/immGen.vhd proj/src/TopLevel/ALUCtl.vhd proj/src/TopLevel/RISCV_Processor.vhd proj/src/TopLevel/control.vhd proj/src/TopLevel/mem.vhd proj/src/TopLevel/Adder_Subtractor_N.vhd proj/src/TopLevel/barrelShifter.vhd proj/src/TopLevel/regfile.vhd proj/src/TopLevel/byteMd.vhd proj/src/TopLevel/reg_N.vhd proj/src/TopLevel/logicUnit.vhd proj/src/TopLevel/dffg.vhd proj/src/TopLevel/bit_extender12_32.vhd proj/src/TopLevel/Gates/org2.vhd proj/src/TopLevel/Gates/andg2.vhd proj/src/TopLevel/Gates/xorg_N.vhd proj/src/TopLevel/Gates/xorg2.vhd proj/src/TopLevel/Gates/invg.vhd proj/src/TopLevel/Gates/org_N.vhd proj/src/TopLevel/Gates/inv_N.vhd proj/src/TopLevel/Gates/andg_N.vhd proj/src/TopLevel/Adder/fa.vhd proj/src/TopLevel/Adder/adder_N.vhd proj/src/TopLevel/Dataflow/mux2t1_N.vhd proj/src/TopLevel/Dataflow/decoder_5to32.vhd proj/src/TopLevel/Dataflow/mux_32to1_32bit.vhd proj/src/TopLevel/Dataflow/mux4t1_N.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -76,5 +76,5 @@ vcom -2008 -work internal/ModelSimContainer/work proj/src/RISCV_types.vhd intern
 -- Compiling architecture dataflow of mux_32to1_32bit
 -- Compiling entity mux4t1_N
 -- Compiling architecture dataflow of mux4t1_N
-End time: 00:49:08 on Apr 03,2026, Elapsed time: 0:00:00
+End time: 22:59:12 on Apr 04,2026, Elapsed time: 0:00:00
 Errors: 0, Warnings: 2
