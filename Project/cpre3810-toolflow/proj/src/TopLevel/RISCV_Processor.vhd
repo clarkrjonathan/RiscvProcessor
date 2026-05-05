@@ -438,6 +438,9 @@ architecture structure of RISCV_Processor is
   -- Consolidated ALUOut: mux between ALU result and AUIPC result
   -- This is what enters EX/MEM ALUOut field and is the forwarding source
   signal s_ALUOut_Consol   : std_logic_vector(N-1 downto 0);
+  
+  signal s_LUI_Inst        : std_logic;
+  signal s_LUIALU_Consol   : std_logic_vector(N-1 downto 0);
 
   ---------------------------------------------------------------------------
   -- EX/MEM register outputs
@@ -579,6 +582,8 @@ begin
       o_ALUOp    => s_ALUOp,    o_AUIPC    => s_AUIPC_d,
       o_ALUSrc   => s_ALUSrc_d, o_HaltS    => s_haltFlag_d,
       o_memWrite => s_memWrite_d);
+      
+      s_LUI_Inst <= ex_WRBCKSEL(0) and (not ex_WRBCKSEL(1));
 
   ImmediateGen: immGen
     port map(i_Inst => id_Inst, o_Imm => s_Imm);
@@ -606,7 +611,7 @@ begin
       i_FWD_RS2      => s_FWD_RS2,
       i_RS1_RegFile  => s_RS1Data_RF,
       i_RS2_RegFile  => s_RS2Data_RF,
-      i_EX_ALUOut    => s_ALUOut_EX,      -- combinatorial, from EX stage below
+      i_EX_ALUOut    => s_LUIALU_Consol,      -- combinatorial, from EX stage below
       i_EXMEM_ALUOut => mem_ALUOut,        -- from EX/MEM register
       i_MEM_ByteOut  => s_ByteOut_MEM,     -- from byte module in MEM stage
       o_RS1Data      => s_RS1Data_FWD,
@@ -700,6 +705,16 @@ begin
              i_D0 => s_ALUOut_EX,       -- normal ALU result
              i_D1 => s_BranchJumpAdded, -- AUIPC: PC + Imm
              o_O  => s_ALUOut_Consol);
+             
+  -- Need to also consolidate with LUI Imm value so that the same value can be forwarded without
+  -- Additional complexity to Hazard and Forwarding units
+  LUIALUConsolMux: mux2t1_N
+    generic map(N => DATA_WIDTH)
+    port map(i_S  => s_LUI_Inst,
+             i_D0 => s_ALUOut_Consol,       -- normal ALU result
+             i_D1 => ex_Imm, -- AUIPC: PC + Imm
+             o_O  => s_LUIALU_Consol);	
+ 
 
   -- Imm passthrough EX -> MEM (for LUI in WB)
   -- Follows EX/MEM stall bit so it stalls in sync with the rest of EX/MEM
@@ -730,7 +745,7 @@ begin
       i_WE          => s_EXMEM_WE,    i_Squash      => s_Squash(1),
       i_Inst        => ex_Inst,
       i_PCWriteBack => s_PCWriteBack_EX,
-      i_ALUOut      => s_ALUOut_Consol,  -- consolidated ALU/AUIPC result
+      i_ALUOut      => s_LUIALU_Consol,  -- consolidated ALU/AUIPC/LUI result
       i_RS2Data     => ex_RS2Data,
       i_memWrite    => ex_memWrite,    i_byteOp      => ex_byteOp,
       i_regWrite    => ex_regWrite,    i_WRBCKSEL    => ex_WRBCKSEL,
