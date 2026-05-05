@@ -1,26 +1,19 @@
 -------------------------------------------------------------------------
 -- ID_EX.vhd  --  ID/EX Pipeline Register
 --
+-- Forwarding is handled UPSTREAM of this register by the forwarding_unit
+-- mux in the decode stage. This register simply stores whatever RS1Data
+-- and RS2Data it receives -- no per-field WE override needed.
+--
 -- Fields:
 --   Data:    PC(32), PCInc(32), Inst(32), RS1Data(32), RS2Data(32), Imm(32)
 --   Control: ALUCTL(9), jalr(1), jump(1), branch(1), AUIPC(1), ALUSrc(1),
 --            memWrite(1), byteOp(4), regWrite(1), WRBCKSEL(2), haltFlag(1)
 --
--- Forwarding ports on RS1Data and RS2Data only:
---   During a stall (i_WE='0'), the hazard unit can still overwrite RS1Data
---   and/or RS2Data by asserting i_FWD_RS1_EN / i_FWD_RS2_EN along with the
---   forwarded value. The per-field WE is then forced '1' for that field only
---   while all other fields continue to hold (WE='0').
---
---   D-input mux priority per forwardable field:
---     Squash=1          -> NOP constant   (highest priority)
---     FWD_EN=1          -> forwarded data
---     normal            -> upstream input (lowest)
---   When squash is asserted the FWD path is irrelevant because the register
---   is being flushed anyway; the squash takes priority in the mux.
---
--- For software-scheduled use:
---   i_WE='1', i_Squash='0', i_FWD_RS1_EN='0', i_FWD_RS2_EN='0'
+-- For software-scheduled use: tie i_WE='1', i_Squash='0'.
+-- For hardware hazard use:
+--   i_WE driven by NOT(stall[2]) from hazard unit
+--   i_Squash driven by squash[2] from hazard unit
 -------------------------------------------------------------------------
 
 library IEEE;
@@ -49,60 +42,46 @@ entity ID_EX is
     NOP_HALTFLAG : std_logic_vector(0 downto 0)               := "0"
   );
   port(
-    i_CLK         : in  std_logic;
-    i_RST         : in  std_logic;
-    i_WE          : in  std_logic;
-    i_Squash      : in  std_logic;
+    i_CLK      : in  std_logic;
+    i_RST      : in  std_logic;
+    i_WE       : in  std_logic;
+    i_Squash   : in  std_logic;
 
-    -- Data inputs from Decode
-    i_PC          : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_PCInc       : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_Inst        : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_RS1Data     : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_RS2Data     : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_Imm         : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_PC       : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_PCInc    : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_Inst     : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_RS1Data  : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_RS2Data  : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_Imm      : in  std_logic_vector(DATA_WIDTH-1 downto 0);
+    i_ALUCTL   : in  std_logic_vector(ALU_CTL_WIDTH-1 downto 0);
+    i_jalr     : in  std_logic;
+    i_jump     : in  std_logic;
+    i_branch   : in  std_logic;
+    i_AUIPC    : in  std_logic;
+    i_ALUSrc   : in  std_logic;
+    i_memWrite : in  std_logic;
+    i_byteOp   : in  std_logic_vector(BYTE_OP_WIDTH-1 downto 0);
+    i_regWrite : in  std_logic;
+    i_WRBCKSEL : in  std_logic_vector(1 downto 0);
+    i_haltFlag : in  std_logic;
 
-    -- Control inputs from Decode
-    i_ALUCTL      : in  std_logic_vector(ALU_CTL_WIDTH-1 downto 0);
-    i_jalr        : in  std_logic;
-    i_jump        : in  std_logic;
-    i_branch      : in  std_logic;
-    i_AUIPC       : in  std_logic;
-    i_ALUSrc      : in  std_logic;
-    i_memWrite    : in  std_logic;
-    i_byteOp      : in  std_logic_vector(BYTE_OP_WIDTH-1 downto 0);
-    i_regWrite    : in  std_logic;
-    i_WRBCKSEL    : in  std_logic_vector(1 downto 0);
-    i_haltFlag    : in  std_logic;
-
-    -- Forwarding ports: override RS1/RS2 even during stall
-    -- Assert FWD_EN alongside the forwarded value; WE for that field
-    -- is internally forced '1' when FWD_EN is asserted.
-    i_FWD_RS1_EN  : in  std_logic;
-    i_FWD_RS1Data : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-    i_FWD_RS2_EN  : in  std_logic;
-    i_FWD_RS2Data : in  std_logic_vector(DATA_WIDTH-1 downto 0);
-
-    -- Data outputs to Execute
-    o_PC          : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    o_PCInc       : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    o_Inst        : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    o_RS1Data     : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    o_RS2Data     : out std_logic_vector(DATA_WIDTH-1 downto 0);
-    o_Imm         : out std_logic_vector(DATA_WIDTH-1 downto 0);
-
-    -- Control outputs
-    o_ALUCTL      : out std_logic_vector(ALU_CTL_WIDTH-1 downto 0);
-    o_jalr        : out std_logic;
-    o_jump        : out std_logic;
-    o_branch      : out std_logic;
-    o_AUIPC       : out std_logic;
-    o_ALUSrc      : out std_logic;
-    o_memWrite    : out std_logic;
-    o_byteOp      : out std_logic_vector(BYTE_OP_WIDTH-1 downto 0);
-    o_regWrite    : out std_logic;
-    o_WRBCKSEL    : out std_logic_vector(1 downto 0);
-    o_haltFlag    : out std_logic
+    o_PC       : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_PCInc    : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_Inst     : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_RS1Data  : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_RS2Data  : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_Imm      : out std_logic_vector(DATA_WIDTH-1 downto 0);
+    o_ALUCTL   : out std_logic_vector(ALU_CTL_WIDTH-1 downto 0);
+    o_jalr     : out std_logic;
+    o_jump     : out std_logic;
+    o_branch   : out std_logic;
+    o_AUIPC    : out std_logic;
+    o_ALUSrc   : out std_logic;
+    o_memWrite : out std_logic;
+    o_byteOp   : out std_logic_vector(BYTE_OP_WIDTH-1 downto 0);
+    o_regWrite : out std_logic;
+    o_WRBCKSEL : out std_logic_vector(1 downto 0);
+    o_haltFlag : out std_logic
   );
 end ID_EX;
 
@@ -120,9 +99,7 @@ architecture structure of ID_EX is
     );
   end component;
 
-  ---------------------------------------------------------------------------
-  -- Squash-muxed / forward-muxed D inputs
-  ---------------------------------------------------------------------------
+  -- Squash-muxed D inputs
   signal s_D_PC       : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal s_D_PCInc    : std_logic_vector(DATA_WIDTH-1 downto 0);
   signal s_D_Inst     : std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -141,15 +118,7 @@ architecture structure of ID_EX is
   signal s_D_WRBCKSEL : std_logic_vector(1 downto 0);
   signal s_D_haltFlag : std_logic_vector(0 downto 0);
 
-  ---------------------------------------------------------------------------
-  -- Per-field WE: forwarding fields can override the global WE
-  ---------------------------------------------------------------------------
-  signal s_WE_RS1 : std_logic;
-  signal s_WE_RS2 : std_logic;
-
-  ---------------------------------------------------------------------------
-  -- reg_N output wires for 1-bit fields (reg_N uses vectors)
-  ---------------------------------------------------------------------------
+  -- reg_N output wires for 1-bit fields
   signal s_Q_jalr     : std_logic_vector(0 downto 0);
   signal s_Q_jump     : std_logic_vector(0 downto 0);
   signal s_Q_branch   : std_logic_vector(0 downto 0);
@@ -161,56 +130,26 @@ architecture structure of ID_EX is
 
 begin
 
-  ---------------------------------------------------------------------------
-  -- Squash mux for non-forwardable fields
-  -- Squash takes priority over everything; when squashing the instruction
-  -- is a bubble so forwarding is irrelevant.
-  ---------------------------------------------------------------------------
-  s_D_PC       <= NOP_PC             when i_Squash = '1' else i_PC;
-  s_D_PCInc    <= NOP_PCINC          when i_Squash = '1' else i_PCInc;
-  s_D_Inst     <= NOP_INST           when i_Squash = '1' else i_Inst;
-  s_D_Imm      <= NOP_IMM            when i_Squash = '1' else i_Imm;
-  s_D_ALUCTL   <= NOP_ALUCTL         when i_Squash = '1' else i_ALUCTL;
-  s_D_jalr     <= NOP_JALR           when i_Squash = '1' else (0 => i_jalr);
-  s_D_jump     <= NOP_JUMP           when i_Squash = '1' else (0 => i_jump);
-  s_D_branch   <= NOP_BRANCH         when i_Squash = '1' else (0 => i_branch);
-  s_D_AUIPC    <= NOP_AUIPC          when i_Squash = '1' else (0 => i_AUIPC);
-  s_D_ALUSrc   <= NOP_ALUSRC         when i_Squash = '1' else (0 => i_ALUSrc);
-  s_D_memWrite <= NOP_MEMWRITE       when i_Squash = '1' else (0 => i_memWrite);
-  s_D_byteOp   <= NOP_BYTEOP         when i_Squash = '1' else i_byteOp;
-  s_D_regWrite <= NOP_REGWRITE       when i_Squash = '1' else (0 => i_regWrite);
-  s_D_WRBCKSEL <= NOP_WRBCKSEL       when i_Squash = '1' else i_WRBCKSEL;
-  s_D_haltFlag <= NOP_HALTFLAG       when i_Squash = '1' else (0 => i_haltFlag);
+  -- Squash mux: select NOP constants when i_Squash='1'
+  s_D_PC       <= NOP_PC       when i_Squash = '1' else i_PC;
+  s_D_PCInc    <= NOP_PCINC    when i_Squash = '1' else i_PCInc;
+  s_D_Inst     <= NOP_INST     when i_Squash = '1' else i_Inst;
+  s_D_RS1Data  <= NOP_RS1DATA  when i_Squash = '1' else i_RS1Data;
+  s_D_RS2Data  <= NOP_RS2DATA  when i_Squash = '1' else i_RS2Data;
+  s_D_Imm      <= NOP_IMM      when i_Squash = '1' else i_Imm;
+  s_D_ALUCTL   <= NOP_ALUCTL   when i_Squash = '1' else i_ALUCTL;
+  s_D_jalr     <= NOP_JALR     when i_Squash = '1' else (0 => i_jalr);
+  s_D_jump     <= NOP_JUMP     when i_Squash = '1' else (0 => i_jump);
+  s_D_branch   <= NOP_BRANCH   when i_Squash = '1' else (0 => i_branch);
+  s_D_AUIPC    <= NOP_AUIPC    when i_Squash = '1' else (0 => i_AUIPC);
+  s_D_ALUSrc   <= NOP_ALUSRC   when i_Squash = '1' else (0 => i_ALUSrc);
+  s_D_memWrite <= NOP_MEMWRITE when i_Squash = '1' else (0 => i_memWrite);
+  s_D_byteOp   <= NOP_BYTEOP   when i_Squash = '1' else i_byteOp;
+  s_D_regWrite <= NOP_REGWRITE when i_Squash = '1' else (0 => i_regWrite);
+  s_D_WRBCKSEL <= NOP_WRBCKSEL when i_Squash = '1' else i_WRBCKSEL;
+  s_D_haltFlag <= NOP_HALTFLAG when i_Squash = '1' else (0 => i_haltFlag);
 
-  ---------------------------------------------------------------------------
-  -- Forwardable fields: squash > forward > normal
-  ---------------------------------------------------------------------------
-  s_D_RS1Data <= NOP_RS1DATA  when i_Squash = '1' else
-                 i_FWD_RS1Data when i_FWD_RS1_EN = '1' else
-                 i_RS1Data;
-
-  s_D_RS2Data <= NOP_RS2DATA  when i_Squash = '1' else
-                 i_FWD_RS2Data when i_FWD_RS2_EN = '1' else
-                 i_RS2Data;
-
-  ---------------------------------------------------------------------------
-  -- Per-field WE for RS1/RS2:
-  --   Normal case:   s_WE = i_WE  (global stall controls write)
-  --   Forward case:  s_WE = '1'   (force write even during stall)
-  --   Squash case:   handled by D mux; WE can be '1' (squash value writes in)
-  --
-  -- When squashing, i_WE should be '1' from the hazard unit anyway since
-  -- we want the NOP to register in. If for some reason i_WE='0' AND squash='1'
-  -- the bubble won't write -- tie squash to also force WE if needed in hw ver.
-  ---------------------------------------------------------------------------
-  s_WE_RS1 <= '1' when i_FWD_RS1_EN = '1' else i_WE;
-  s_WE_RS2 <= '1' when i_FWD_RS2_EN = '1' else i_WE;
-
-  ---------------------------------------------------------------------------
   -- Register instantiations
-  ---------------------------------------------------------------------------
-
-  -- Data fields
   reg_PC: reg_N
     generic map(N => DATA_WIDTH, RST_VAL => NOP_PC)
     port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,
@@ -226,16 +165,14 @@ begin
     port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,
              i_D => s_D_Inst, o_Q => o_Inst);
 
-  -- RS1Data: forwarding-capable, uses s_WE_RS1
   reg_RS1Data: reg_N
     generic map(N => DATA_WIDTH, RST_VAL => NOP_RS1DATA)
-    port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => s_WE_RS1,
+    port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,
              i_D => s_D_RS1Data, o_Q => o_RS1Data);
 
-  -- RS2Data: forwarding-capable, uses s_WE_RS2
   reg_RS2Data: reg_N
     generic map(N => DATA_WIDTH, RST_VAL => NOP_RS2DATA)
-    port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => s_WE_RS2,
+    port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,
              i_D => s_D_RS2Data, o_Q => o_RS2Data);
 
   reg_Imm: reg_N
@@ -243,7 +180,6 @@ begin
     port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,
              i_D => s_D_Imm, o_Q => o_Imm);
 
-  -- Control fields (1-bit fields use N=>1 vectors)
   reg_ALUCTL: reg_N
     generic map(N => ALU_CTL_WIDTH, RST_VAL => NOP_ALUCTL)
     port map(i_CLK => i_CLK, i_RST => i_RST, i_WE => i_WE,

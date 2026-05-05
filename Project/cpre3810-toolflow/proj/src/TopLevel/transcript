@@ -13,97 +13,116 @@
 # // and may not be used in any way not expressly authorized by SISW.
 # //
 add wave -position insertpoint  \
-vsim:/tb/reset_done \
-vsim:/tb/reset \
-vsim:/tb/CLK \
-vsim:/tb/alu_out
-add wave -position insertpoint  \
-vsim:/tb/MyRiscv/s_WRBCKSEL \
-vsim:/tb/MyRiscv/s_RS2Data \
-vsim:/tb/MyRiscv/s_RS1Data \
-vsim:/tb/MyRiscv/s_RS1_PC \
+vsim:/tb/MyRiscv/wb_WRBCKSEL \
+vsim:/tb/MyRiscv/wb_regWrite \
+vsim:/tb/MyRiscv/wb_PCWriteBack \
+vsim:/tb/MyRiscv/wb_Inst \
+vsim:/tb/MyRiscv/wb_Imm \
+vsim:/tb/MyRiscv/wb_ByteOut \
+vsim:/tb/MyRiscv/wb_ALUOut \
+vsim:/tb/MyRiscv/s_WRBCKSEL_d \
+vsim:/tb/MyRiscv/s_Stall \
+vsim:/tb/MyRiscv/s_Squash \
+vsim:/tb/MyRiscv/s_RS2Data_RF \
+vsim:/tb/MyRiscv/s_RS2Data_FWD \
+vsim:/tb/MyRiscv/s_RS1Data_RF \
+vsim:/tb/MyRiscv/s_RS1Data_FWD \
+vsim:/tb/MyRiscv/s_regWrite_d \
 vsim:/tb/MyRiscv/s_RegWrData \
 vsim:/tb/MyRiscv/s_RegWrAddr \
 vsim:/tb/MyRiscv/s_RegWr \
-vsim:/tb/MyRiscv/s_PCWriteBack \
-vsim:/tb/MyRiscv/s_PCNext \
+vsim:/tb/MyRiscv/s_PCWriteBack_EX \
 vsim:/tb/MyRiscv/s_PCFetch \
+vsim:/tb/MyRiscv/s_PC_WE \
 vsim:/tb/MyRiscv/s_PC \
 vsim:/tb/MyRiscv/s_Ovfl \
-vsim:/tb/MyRiscv/s_jump \
-vsim:/tb/MyRiscv/s_jalr \
+vsim:/tb/MyRiscv/s_memWrite_d \
+vsim:/tb/MyRiscv/s_MEMWB_WE \
+vsim:/tb/MyRiscv/s_jump_d \
+vsim:/tb/MyRiscv/s_jalr_d \
 vsim:/tb/MyRiscv/s_Inst \
 vsim:/tb/MyRiscv/s_IncPC \
+vsim:/tb/MyRiscv/s_Imm_MEM \
+vsim:/tb/MyRiscv/s_Imm_EX \
 vsim:/tb/MyRiscv/s_Imm \
 vsim:/tb/MyRiscv/s_IMemAddr \
+vsim:/tb/MyRiscv/s_IFID_WE \
+vsim:/tb/MyRiscv/s_IDEX_WE \
+vsim:/tb/MyRiscv/s_haltFlag_d \
 vsim:/tb/MyRiscv/s_Halt \
+vsim:/tb/MyRiscv/s_FWD_RS2 \
+vsim:/tb/MyRiscv/s_FWD_RS1 \
+vsim:/tb/MyRiscv/s_EXMEM_WE \
 vsim:/tb/MyRiscv/s_DMemWr \
 vsim:/tb/MyRiscv/s_DMemOut \
 vsim:/tb/MyRiscv/s_DMemData \
 vsim:/tb/MyRiscv/s_DMemAddr \
-vsim:/tb/MyRiscv/s_byteOut \
-vsim:/tb/MyRiscv/s_byteOp \
+vsim:/tb/MyRiscv/s_CondMet_EX \
+vsim:/tb/MyRiscv/s_ByteOut_MEM \
+vsim:/tb/MyRiscv/s_byteOp_d \
+vsim:/tb/MyRiscv/s_BranchTarget \
 vsim:/tb/MyRiscv/s_BranchJumpAdded \
-vsim:/tb/MyRiscv/s_BranchJump \
-vsim:/tb/MyRiscv/s_branch \
-vsim:/tb/MyRiscv/s_B \
-vsim:/tb/MyRiscv/s_AUIPC \
-vsim:/tb/MyRiscv/s_ALUZero \
-vsim:/tb/MyRiscv/s_ALUSrc \
-vsim:/tb/MyRiscv/s_ALUOut \
+vsim:/tb/MyRiscv/s_BranchJump_EX \
+vsim:/tb/MyRiscv/s_branch_d \
+vsim:/tb/MyRiscv/s_BJAdder_A \
+vsim:/tb/MyRiscv/s_AUIPC_d \
+vsim:/tb/MyRiscv/s_ALUZero_EX \
+vsim:/tb/MyRiscv/s_ALUSrc_d \
+vsim:/tb/MyRiscv/s_ALUOut_EX \
+vsim:/tb/MyRiscv/s_ALUOut_Consol \
 vsim:/tb/MyRiscv/s_ALUOp \
 vsim:/tb/MyRiscv/s_ALUCTL \
+vsim:/tb/MyRiscv/s_ALU_B \
 vsim:/tb/MyRiscv/oALUOut \
+vsim:/tb/MyRiscv/mem_WRBCKSEL \
+vsim:/tb/MyRiscv/mem_RS2Data \
+vsim:/tb/MyRiscv/mem_regWrite \
+vsim:/tb/MyRiscv/mem_PCWriteBack \
+vsim:/tb/MyRiscv/mem_memWrite \
+vsim:/tb/MyRiscv/mem_Inst \
+vsim:/tb/MyRiscv/mem_haltFlag \
+vsim:/tb/MyRiscv/mem_byteOp \
+vsim:/tb/MyRiscv/mem_ALUOut \
 vsim:/tb/MyRiscv/iRST \
 vsim:/tb/MyRiscv/iInstLd \
 vsim:/tb/MyRiscv/iInstExt \
 vsim:/tb/MyRiscv/iInstAddr \
-vsim:/tb/MyRiscv/iCLK
+vsim:/tb/MyRiscv/id_PCInc \
+vsim:/tb/MyRiscv/id_PC \
+vsim:/tb/MyRiscv/id_Inst \
+vsim:/tb/MyRiscv/iCLK \
+vsim:/tb/MyRiscv/ex_WRBCKSEL \
+vsim:/tb/MyRiscv/ex_RS2Data \
+vsim:/tb/MyRiscv/ex_RS1Data \
+vsim:/tb/MyRiscv/ex_regWrite \
+vsim:/tb/MyRiscv/ex_PCInc \
+vsim:/tb/MyRiscv/ex_PC \
+vsim:/tb/MyRiscv/ex_memWrite \
+vsim:/tb/MyRiscv/ex_jump \
+vsim:/tb/MyRiscv/ex_jalr \
+vsim:/tb/MyRiscv/ex_Inst \
+vsim:/tb/MyRiscv/ex_Imm \
+vsim:/tb/MyRiscv/ex_haltFlag \
+vsim:/tb/MyRiscv/ex_byteOp \
+vsim:/tb/MyRiscv/ex_branch \
+vsim:/tb/MyRiscv/ex_AUIPC \
+vsim:/tb/MyRiscv/ex_ALUSrc \
+vsim:/tb/MyRiscv/ex_ALUCTL
 add wave -position insertpoint  \
-vsim1:/tb/reset_done \
-vsim1:/tb/reset \
-vsim1:/tb/CLK \
-vsim1:/tb/alu_out
+vsim:/tb/MyRiscv/EXMEM_reg/i_regWrite
 add wave -position insertpoint  \
-vsim1:/tb/MyRiscv/s_WRBCKSEL \
-vsim1:/tb/MyRiscv/s_RS2Data \
-vsim1:/tb/MyRiscv/s_RS1Data \
-vsim1:/tb/MyRiscv/s_RS1_PC \
-vsim1:/tb/MyRiscv/s_RegWrData \
-vsim1:/tb/MyRiscv/s_RegWrAddr \
-vsim1:/tb/MyRiscv/s_RegWr \
-vsim1:/tb/MyRiscv/s_PCWriteBack \
-vsim1:/tb/MyRiscv/s_PCNext \
-vsim1:/tb/MyRiscv/s_PCFetch \
-vsim1:/tb/MyRiscv/s_PC \
-vsim1:/tb/MyRiscv/s_Ovfl \
-vsim1:/tb/MyRiscv/s_jump \
-vsim1:/tb/MyRiscv/s_jalr \
-vsim1:/tb/MyRiscv/s_Inst \
-vsim1:/tb/MyRiscv/s_IncPC \
-vsim1:/tb/MyRiscv/s_Imm \
-vsim1:/tb/MyRiscv/s_IMemAddr \
-vsim1:/tb/MyRiscv/s_Halt \
-vsim1:/tb/MyRiscv/s_DMemWr \
-vsim1:/tb/MyRiscv/s_DMemOut \
-vsim1:/tb/MyRiscv/s_DMemData \
-vsim1:/tb/MyRiscv/s_DMemAddr \
-vsim1:/tb/MyRiscv/s_CondMet \
-vsim1:/tb/MyRiscv/s_byteOut \
-vsim1:/tb/MyRiscv/s_byteOp \
-vsim1:/tb/MyRiscv/s_BranchJumpAdded \
-vsim1:/tb/MyRiscv/s_BranchJump \
-vsim1:/tb/MyRiscv/s_branch \
-vsim1:/tb/MyRiscv/s_B \
-vsim1:/tb/MyRiscv/s_AUIPC \
-vsim1:/tb/MyRiscv/s_ALUZero \
-vsim1:/tb/MyRiscv/s_ALUSrc \
-vsim1:/tb/MyRiscv/s_ALUOut \
-vsim1:/tb/MyRiscv/s_ALUOp \
-vsim1:/tb/MyRiscv/s_ALUCTL \
-vsim1:/tb/MyRiscv/oALUOut \
-vsim1:/tb/MyRiscv/iRST \
-vsim1:/tb/MyRiscv/iInstLd \
-vsim1:/tb/MyRiscv/iInstExt \
-vsim1:/tb/MyRiscv/iInstAddr \
-vsim1:/tb/MyRiscv/iCLK
+vsim:/tb/MyRiscv/EXMEM_reg/o_ALUOut
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/EXMEM_reg/i_ALUOut
+# ** Error: (vish-7) Failed to open info file "/home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/containers/sim_container_0/work/_info" in read mode.
+# No such file or directory. (errno = ENOENT)
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_ALUOut_Consol
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_BranchJumpAdded
+add wave -position insertpoint  \
+vsim2:/tb/MyRiscv/s_RegWrData
+add wave -position insertpoint  \
+vsim2:/tb/MyRiscv/s_AUIPC_d
+add wave -position insertpoint  \
+vsim2:/tb/MyRiscv/ControlMod/o_AUIPC
