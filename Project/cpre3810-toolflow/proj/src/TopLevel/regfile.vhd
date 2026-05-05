@@ -39,6 +39,17 @@ architecture structural of regfile is
     );
   end component;
   
+  -- Component: 2:1 32-bit mux (used for write-forwarding bypass)
+  component mux2t1_N
+    generic(N : integer := 32);
+    port(
+      i_S  : in  std_logic;
+      i_D0 : in  std_logic_vector(N-1 downto 0);
+      i_D1 : in  std_logic_vector(N-1 downto 0);
+      o_O  : out std_logic_vector(N-1 downto 0)
+    );
+  end component;
+
   -- Component: 32:1 32-bit mux
   component mux_32to1_32bit
     port(
@@ -56,7 +67,8 @@ architecture structural of regfile is
   
   -- Internal signals
   signal s_reg_write_en : std_logic_vector(31 downto 0);  -- Individual write enables
-  signal s_reg_data : reg_array;  -- Register outputs
+  signal s_reg_data     : reg_array;  -- Raw register outputs (from reg_N)
+  signal s_reg_out      : reg_array;  -- Post-bypass mux outputs (fed to read muxes)
   signal s_SpWriteEnable : std_logic;
   
 begin
@@ -112,26 +124,50 @@ begin
 	    end generate REG_NORMAL;
 
 	end generate GEN_REGS;
+
+  ---------------------------------------------------------------------------
+  -- Write-forwarding bypass muxes
+  -- For registers 1-31: when the write enable for that register is asserted,
+  -- the read output returns i_WR_DATA directly rather than the stored value.
+  -- This implements same-cycle write-to-read forwarding so that a WB write
+  -- and an ID read of the same register in the same cycle returns the new value.
+  -- Register 0 is hardwired zero -- no bypass, always reads s_reg_data(0).
+  ---------------------------------------------------------------------------
+
+  -- x0: no bypass, always zero
+  s_reg_out(0) <= s_reg_data(0);
+
+  -- Registers 1-31: bypass mux selects write data when write enable is asserted
+  GEN_BYPASS: for i in 1 to 31 generate
+    BYPASS_MUX: mux2t1_N
+      generic map(N => 32)
+      port map(
+        i_S  => s_reg_write_en(i),  -- WE for this register: '1' = forward write data
+        i_D0 => s_reg_data(i),      -- normal: stored register value
+        i_D1 => i_WR_DATA,          -- bypass: value being written this cycle
+        o_O  => s_reg_out(i)
+      );
+  end generate GEN_BYPASS;
   
   -- Read Port 1: Mux for rs1
   MUX_RS1: mux_32to1_32bit
     port map(
-      in0  => s_reg_data(0),  in1  => s_reg_data(1),
-      in2  => s_reg_data(2),  in3  => s_reg_data(3),
-      in4  => s_reg_data(4),  in5  => s_reg_data(5),
-      in6  => s_reg_data(6),  in7  => s_reg_data(7),
-      in8  => s_reg_data(8),  in9  => s_reg_data(9),
-      in10 => s_reg_data(10), in11 => s_reg_data(11),
-      in12 => s_reg_data(12), in13 => s_reg_data(13),
-      in14 => s_reg_data(14), in15 => s_reg_data(15),
-      in16 => s_reg_data(16), in17 => s_reg_data(17),
-      in18 => s_reg_data(18), in19 => s_reg_data(19),
-      in20 => s_reg_data(20), in21 => s_reg_data(21),
-      in22 => s_reg_data(22), in23 => s_reg_data(23),
-      in24 => s_reg_data(24), in25 => s_reg_data(25),
-      in26 => s_reg_data(26), in27 => s_reg_data(27),
-      in28 => s_reg_data(28), in29 => s_reg_data(29),
-      in30 => s_reg_data(30), in31 => s_reg_data(31),
+      in0  => s_reg_out(0),  in1  => s_reg_out(1),
+      in2  => s_reg_out(2),  in3  => s_reg_out(3),
+      in4  => s_reg_out(4),  in5  => s_reg_out(5),
+      in6  => s_reg_out(6),  in7  => s_reg_out(7),
+      in8  => s_reg_out(8),  in9  => s_reg_out(9),
+      in10 => s_reg_out(10), in11 => s_reg_out(11),
+      in12 => s_reg_out(12), in13 => s_reg_out(13),
+      in14 => s_reg_out(14), in15 => s_reg_out(15),
+      in16 => s_reg_out(16), in17 => s_reg_out(17),
+      in18 => s_reg_out(18), in19 => s_reg_out(19),
+      in20 => s_reg_out(20), in21 => s_reg_out(21),
+      in22 => s_reg_out(22), in23 => s_reg_out(23),
+      in24 => s_reg_out(24), in25 => s_reg_out(25),
+      in26 => s_reg_out(26), in27 => s_reg_out(27),
+      in28 => s_reg_out(28), in29 => s_reg_out(29),
+      in30 => s_reg_out(30), in31 => s_reg_out(31),
       sel  => i_RD_ADDR1,
       dout => o_RD_DATA1
     );
@@ -139,22 +175,22 @@ begin
   -- Read Port 2: Mux for rs2
   MUX_RS2: mux_32to1_32bit
     port map(
-      in0  => s_reg_data(0),  in1  => s_reg_data(1),
-      in2  => s_reg_data(2),  in3  => s_reg_data(3),
-      in4  => s_reg_data(4),  in5  => s_reg_data(5),
-      in6  => s_reg_data(6),  in7  => s_reg_data(7),
-      in8  => s_reg_data(8),  in9  => s_reg_data(9),
-      in10 => s_reg_data(10), in11 => s_reg_data(11),
-      in12 => s_reg_data(12), in13 => s_reg_data(13),
-      in14 => s_reg_data(14), in15 => s_reg_data(15),
-      in16 => s_reg_data(16), in17 => s_reg_data(17),
-      in18 => s_reg_data(18), in19 => s_reg_data(19),
-      in20 => s_reg_data(20), in21 => s_reg_data(21),
-      in22 => s_reg_data(22), in23 => s_reg_data(23),
-      in24 => s_reg_data(24), in25 => s_reg_data(25),
-      in26 => s_reg_data(26), in27 => s_reg_data(27),
-      in28 => s_reg_data(28), in29 => s_reg_data(29),
-      in30 => s_reg_data(30), in31 => s_reg_data(31),
+      in0  => s_reg_out(0),  in1  => s_reg_out(1),
+      in2  => s_reg_out(2),  in3  => s_reg_out(3),
+      in4  => s_reg_out(4),  in5  => s_reg_out(5),
+      in6  => s_reg_out(6),  in7  => s_reg_out(7),
+      in8  => s_reg_out(8),  in9  => s_reg_out(9),
+      in10 => s_reg_out(10), in11 => s_reg_out(11),
+      in12 => s_reg_out(12), in13 => s_reg_out(13),
+      in14 => s_reg_out(14), in15 => s_reg_out(15),
+      in16 => s_reg_out(16), in17 => s_reg_out(17),
+      in18 => s_reg_out(18), in19 => s_reg_out(19),
+      in20 => s_reg_out(20), in21 => s_reg_out(21),
+      in22 => s_reg_out(22), in23 => s_reg_out(23),
+      in24 => s_reg_out(24), in25 => s_reg_out(25),
+      in26 => s_reg_out(26), in27 => s_reg_out(27),
+      in28 => s_reg_out(28), in29 => s_reg_out(29),
+      in30 => s_reg_out(30), in31 => s_reg_out(31),
       sel  => i_RD_ADDR2,
       dout => o_RD_DATA2
     );
