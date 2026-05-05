@@ -19,9 +19,24 @@ main:
 
     lasw a0, array
 
-    lw a1, array_size
+    lui t0, %hi(array_size)
+    nop
+    nop
+    nop
+    nop
+    lw a1, %lo(array_size)(t0)
 
-    jal ra, sort
+    lui t1, %hi(sort)
+    nop
+    nop
+    nop
+    nop
+    addi t1, t1, %lo(sort)
+    nop
+    nop
+    nop
+    nop
+    jalr ra, 0(t1)
     nop
     nop
 
@@ -58,7 +73,6 @@ sort:
     lasw s2, temp
 
     addi t0, x0, 2
-
     nop
     nop
     nop
@@ -92,7 +106,6 @@ pair_loop:
     nop
 
     add s5, s4, s3
-
     nop
     nop
     nop
@@ -104,13 +117,11 @@ pair_loop:
 
 mid_ok:
     slli t0, s3, 1
-
     nop
     nop
     nop
     nop
     add s6, s4, t0
-
     nop
     nop
     nop
@@ -185,13 +196,22 @@ take_right:
     addi t2, t2, 1
     addi t3, t3, 1
 
-    jal x0, merge_loop
+    lui t0, %hi(merge_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(merge_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
 
 take_left:
-    nop
     slli t4, t3, 2
     nop
     nop
@@ -207,7 +227,17 @@ take_left:
     addi t1, t1, 1
     addi t3, t3, 1
 
-    jal x0, merge_loop
+    lui t0, %hi(merge_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(merge_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
@@ -250,7 +280,17 @@ copy_left_loop:
     addi t1, t1, 1
     addi t3, t3, 1
 
-    jal x0, copy_left_loop
+    lui t0, %hi(copy_left_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(copy_left_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
@@ -293,7 +333,17 @@ copy_right_loop:
     addi t2, t2, 1
     addi t3, t3, 1
 
-    jal x0, copy_right_loop
+    lui t0, %hi(copy_right_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(copy_right_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
@@ -306,7 +356,17 @@ next_pair:
     nop
     add s4, s4, t0
 
-    jal x0, pair_loop
+    lui t0, %hi(pair_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(pair_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
@@ -325,7 +385,6 @@ copy_back_loop:
     nop
 
     slli t0, s7, 2
-
     nop
     nop
     nop
@@ -346,7 +405,17 @@ copy_back_loop:
 
     addi s7, s7, 1
 
-    jal x0, copy_back_loop
+    lui t0, %hi(copy_back_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(copy_back_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
@@ -354,7 +423,17 @@ copy_back_loop:
 next_width:
     slli s3, s3, 1
 
-    jal x0, outer_width_loop
+    lui t0, %hi(outer_width_loop)
+    nop
+    nop
+    nop
+    nop
+    addi t0, t0, %lo(outer_width_loop)
+    nop
+    nop
+    nop
+    nop
+    jalr x0, 0(t0)
     nop
     nop
 
