@@ -1,0 +1,1174 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 linux_x86_64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+cd /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/internal/ModelSimContainer
+# reading modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_barrelShifter.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 19:56:34 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_barrelShifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture behavior of tb_barrelShifter
+# End time: 19:56:34 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 19:56:34 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_byteMd
+# -- Compiling architecture behavior of tb_byteMd
+# End time: 19:56:34 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_control.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 19:56:34 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_control
+# -- Compiling architecture behavior of tb_control
+# End time: 19:56:34 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_immGen.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 19:56:34 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_immGen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_immGen
+# -- Compiling architecture behavior of tb_immGen
+# -- Compiling entity tb_logicUnit
+# -- Compiling architecture behavior of tb_logicUnit
+# End time: 19:56:34 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_mux_4t1_N.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 19:56:34 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_mux_4t1_N.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_mux4t1_N
+# -- Compiling architecture behavior of tb_mux4t1_N
+# End time: 19:56:34 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_control -voptargs=+acc
+# vsim work.tb_control -voptargs="+acc" 
+# Start time: 19:56:58 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_control(behavior)#1
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.riscv_types(body)
+# Loading work.control(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_control/s_WRBCKSEL \
+sim:/tb_control/s_regWrite \
+sim:/tb_control/s_memWrite \
+sim:/tb_control/s_jump \
+sim:/tb_control/s_jalr \
+sim:/tb_control/s_Inst \
+sim:/tb_control/s_HaltS \
+sim:/tb_control/s_byteOp \
+sim:/tb_control/s_branch \
+sim:/tb_control/s_AUIPC \
+sim:/tb_control/s_ALUSrc \
+sim:/tb_control/s_ALUOp
+run 1000
+# ** Note: control LB   PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control LH   PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control LW   PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control LBU  PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control LHU  PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control ADDI PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLTI PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLTU PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control XORI PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control ORI  PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control ANDI PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLLI PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SRLI PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SRAI PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control LUI  PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control AUIP PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SW   PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control ADD  PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SUB  PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLL  PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLT  PASS
+#    Time: 210 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SLTU PASS
+#    Time: 220 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control XOR  PASS
+#    Time: 230 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SRL  PASS
+#    Time: 240 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control SRA  PASS
+#    Time: 250 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control OR   PASS
+#    Time: 260 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control AND  PASS
+#    Time: 270 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BEQ  PASS
+#    Time: 280 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BNE  PASS
+#    Time: 290 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BLT  PASS
+#    Time: 300 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BGE  PASS
+#    Time: 310 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BLTU PASS
+#    Time: 320 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control BGEU PASS
+#    Time: 330 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control JALR PASS
+#    Time: 340 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control JAL  PASS
+#    Time: 350 ns  Iteration: 0  Instance: /tb_control
+# ** Note: control WFI  PASS
+#    Time: 360 ns  Iteration: 0  Instance: /tb_control
+# ** Note: tb_control complete
+#    Time: 360 ns  Iteration: 0  Instance: /tb_control
+quit -sim
+# End time: 20:05:24 on Apr 04,2026, Elapsed time: 0:08:26
+# Errors: 0, Warnings: 1
+# Modified modelsim.ini
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALU.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 20:05:35 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity tb_ALU
+# -- Compiling architecture behavior of tb_ALU
+# End time: 20:05:35 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALUCtl.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 20:05:35 on Apr 04,2026
+# vcom -reportprogress 30 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALUCtl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RISCV_types
+# -- Compiling entity tb_ALUCtl
+# -- Compiling architecture behavior of tb_ALUCtl
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALUCtl.vhd(130): (vcom-1615) Existing entity 'tb_ALUCtl' at line 11 will be overwritten.
+# -- Compiling entity tb_ALUCtl
+# ** Warning: /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_ALUCtl.vhd(133): (vcom-1615) Existing architecture 'tb_ALUCtl(behavior)' at line 14 will be overwritten.
+# -- Compiling architecture behavior of tb_ALUCtl
+# End time: 20:05:35 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+vsim -voptargs=+acc work.tb_alu
+# vsim -voptargs="+acc" work.tb_alu 
+# Start time: 20:05:55 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.tb_alu(behavior)#1
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(structure)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1_n(dataflow)#1
+# Loading work.adder_subtractor_n(structural)#1
+# Loading work.xorg_n(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading work.adder_n(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.logicunit(structural)#1
+# Loading work.andg_n(structural)#1
+# Loading work.org_n(structural)#1
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_alu/s_Zero \
+sim:/tb_alu/s_Output \
+sim:/tb_alu/s_B \
+sim:/tb_alu/s_ALUCTL \
+sim:/tb_alu/s_A
+run 1000
+# ** Note: ALU ADD 5+3 PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD wraparound PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD 0+0 PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB 8-3 PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB equal PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB underflow PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<1 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<31 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL FF<<8 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 0<<31 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 80000000>>1 PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL FF000000>>8 PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL >>31 PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 1>>1 zero PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>1 PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>31 PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA pos>>1 PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA 1>>1 zero PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<2 PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 2<1 false PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT -1<1 PASS
+#    Time: 210 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<-1 false PASS
+#    Time: 220 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT equal false PASS
+#    Time: 230 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<2 PASS
+#    Time: 240 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU big<1 false PASS
+#    Time: 250 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<big PASS
+#    Time: 260 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU equal false PASS
+#    Time: 270 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR mixed PASS
+#    Time: 280 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR same zero PASS
+#    Time: 290 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR with zero PASS
+#    Time: 300 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR mixed PASS
+#    Time: 310 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR zeros PASS
+#    Time: 320 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR with zero PASS
+#    Time: 330 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND mixed PASS
+#    Time: 340 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND with zero PASS
+#    Time: 350 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND ones PASS
+#    Time: 360 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ equal PASS
+#    Time: 370 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ not equal PASS
+#    Time: 380 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE equal PASS
+#    Time: 390 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE not equal PASS
+#    Time: 400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 1<2 taken PASS
+#    Time: 410 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 2<1 not taken PASS
+#    Time: 420 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT -1<1 taken PASS
+#    Time: 430 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 2>=1 PASS
+#    Time: 440 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE equal PASS
+#    Time: 450 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 1<2 PASS
+#    Time: 460 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU 1<big taken PASS
+#    Time: 470 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU big>=1 PASS
+#    Time: 480 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU big>=1 PASS
+#    Time: 490 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU 1<big PASS
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU testbench complete
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+vsim -voptargs=+acc work.tb_barrelshifter
+# End time: 20:26:27 on Apr 04,2026, Elapsed time: 0:20:32
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.tb_barrelshifter 
+# Start time: 20:26:27 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_barrelshifter(behavior)#1
+# Loading work.riscv_types(body)
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_barrelshifter/s_ShiftType \
+sim:/tb_barrelshifter/s_ShiftAmt \
+sim:/tb_barrelshifter/s_Result \
+sim:/tb_barrelshifter/s_Data
+run 1000
+# ** Note: barrelShifter SLL 0  PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL 1  PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL 8  PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL 16 PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL 24 PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL 31 PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL MSB lost PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL 0  PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL 1  PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL 8  PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL 16 PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL 31 PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL zero fill PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA pos 1  PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA neg 1  PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA neg 8  PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA neg 31 PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA pos 31 PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL all zeros PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL all zeros PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA all zeros PASS
+#    Time: 210 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SLL all ones 31 PASS
+#    Time: 220 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRL all ones 31 PASS
+#    Time: 230 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: barrelShifter SRA all ones 31 PASS
+#    Time: 240 ns  Iteration: 0  Instance: /tb_barrelshifter
+# ** Note: tb_barrelShifter complete
+#    Time: 240 ns  Iteration: 0  Instance: /tb_barrelshifter
+vsim -voptargs=+acc work.tb_logicunit
+# End time: 20:43:16 on Apr 04,2026, Elapsed time: 0:16:49
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.tb_logicunit 
+# Start time: 20:43:16 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_logicunit(behavior)#1
+# Loading work.riscv_types(body)
+# Loading work.logicunit(structural)#1
+# Loading work.xorg_n(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading work.andg_n(structural)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org_n(structural)#1
+# Loading work.org2(dataflow)#1
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_logicunit/s_O \
+sim:/tb_logicunit/s_CTL \
+sim:/tb_logicunit/s_B \
+sim:/tb_logicunit/s_A
+run 1000
+# ** Note: logicUnit XOR mixed    PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit XOR same     PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit XOR zero     PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit AND mixed    PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit AND zero     PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit AND ones     PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit OR  mixed    PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit OR  zeros    PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit OR  with 0   PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: logicUnit OR  no overlap PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_logicunit
+# ** Note: tb_logicUnit complete
+#    Time: 100 ns  Iteration: 0  Instance: /tb_logicunit
+quit -sim
+# End time: 20:59:25 on Apr 04,2026, Elapsed time: 0:16:09
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.tb_bytemd
+# vsim -voptargs="+acc" work.tb_bytemd 
+# Start time: 20:59:38 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd(43): (vopt-1130) Port "i_ByteAddr" of entity "byteMd" is not in the component being instantiated.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 20:59:39 on Apr 04,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim -voptargs=+acc work.tb_alu
+# vsim -voptargs="+acc" work.tb_alu 
+# Start time: 21:01:45 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.tb_alu(behavior)#1
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(structure)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1_n(dataflow)#1
+# Loading work.adder_subtractor_n(structural)#1
+# Loading work.xorg_n(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading work.adder_n(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.logicunit(structural)#1
+# Loading work.andg_n(structural)#1
+# Loading work.org_n(structural)#1
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_alu/s_Zero \
+sim:/tb_alu/s_Output \
+sim:/tb_alu/s_B \
+sim:/tb_alu/s_ALUCTL \
+sim:/tb_alu/s_A
+run 1000
+# ** Note: ALU ADD 5+3 PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD wraparound PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD 0+0 PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB 8-3 PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB equal PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB underflow PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<1 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<31 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL FF<<8 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 0<<31 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 80000000>>1 PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL FF000000>>8 PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL >>31 PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 1>>1 zero PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>1 PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>31 PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA pos>>1 PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA 1>>1 zero PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<2 PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 2<1 false PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT -1<1 PASS
+#    Time: 210 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<-1 false PASS
+#    Time: 220 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT equal false PASS
+#    Time: 230 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<2 PASS
+#    Time: 240 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU big<1 false PASS
+#    Time: 250 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<big PASS
+#    Time: 260 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU equal false PASS
+#    Time: 270 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR mixed PASS
+#    Time: 280 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR same zero PASS
+#    Time: 290 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR with zero PASS
+#    Time: 300 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR mixed PASS
+#    Time: 310 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR zeros PASS
+#    Time: 320 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR with zero PASS
+#    Time: 330 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND mixed PASS
+#    Time: 340 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND with zero PASS
+#    Time: 350 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND ones PASS
+#    Time: 360 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ equal PASS
+#    Time: 370 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ not equal PASS
+#    Time: 380 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE equal PASS
+#    Time: 390 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE not equal PASS
+#    Time: 400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 1<2 taken PASS
+#    Time: 410 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 2<1 not taken PASS
+#    Time: 420 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT -1<1 taken PASS
+#    Time: 430 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 2>=1 PASS
+#    Time: 440 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE equal PASS
+#    Time: 450 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 1<2 PASS
+#    Time: 460 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU 1<big taken PASS
+#    Time: 470 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU big>=1 PASS
+#    Time: 480 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU big>=1 PASS
+#    Time: 490 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU 1<big PASS
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU testbench complete
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+quit -sim
+# End time: 21:10:55 on Apr 04,2026, Elapsed time: 0:09:10
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 21:11:08 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_byteMd
+# -- Compiling architecture behavior of tb_byteMd
+# End time: 21:11:08 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_bytemd
+# vsim -voptargs="+acc" work.tb_bytemd 
+# Start time: 21:11:24 on Apr 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_bytemd(behavior)#1
+# Loading work.riscv_types(body)
+# Loading work.bytemd(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_bytemd/s_RS2 \
+sim:/tb_bytemd/s_mem \
+sim:/tb_bytemd/s_ByteOut \
+sim:/tb_bytemd/s_ByteOp \
+sim:/tb_bytemd/s_ByteAddr
+run 1000
+# ** Note: byteMd sw        PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=0  PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=1  PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=2  PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=3  PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lw        PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=0 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=1 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=2 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=3 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg0  PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg3  PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Error: byteMd lb  pos   FAIL: got 0x00000000 expected 0x0000007F
+#    Time: 130 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu low   PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu high  PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg   PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg2  PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Error: byteMd lh  pos   FAIL: got 0xFFFFAA7F expected 0x00007FFF
+#    Time: 180 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb rt wr  PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu rt rd PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: tb_byteMd complete
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+quit -sim
+# End time: 21:19:21 on Apr 04,2026, Elapsed time: 0:07:57
+# Errors: 2, Warnings: 1
+vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd
+# QuestaSim-64 vcom 2025.1_2 Compiler 2025.04 Apr  7 2025
+# Start time: 21:19:32 on Apr 04,2026
+# vcom -reportprogress 300 -work work /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/proj/test/tb_byteMd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_byteMd
+# -- Compiling architecture behavior of tb_byteMd
+# End time: 21:19:32 on Apr 04,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_bytemd
+# vsim -voptargs="+acc" work.tb_bytemd 
+# Start time: 21:19:43 on Apr 04,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_bytemd(behavior)#1
+# Loading work.riscv_types(body)
+# Loading work.bytemd(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_bytemd/s_RS2 \
+sim:/tb_bytemd/s_mem \
+sim:/tb_bytemd/s_ByteOut \
+sim:/tb_bytemd/s_ByteOp \
+sim:/tb_bytemd/s_ByteAddr
+run 1000
+# ** Note: byteMd sw        PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=0  PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=1  PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=2  PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=3  PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lw        PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=0 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=1 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=2 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=3 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg0  PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg3  PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  pos   PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu low   PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu high  PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg   PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg2  PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  pos   PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb rt wr  PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu rt rd PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: tb_byteMd complete
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+vsim -voptargs=+acc work.tb_alu
+# End time: 22:03:28 on Apr 04,2026, Elapsed time: 0:43:45
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.tb_alu 
+# Start time: 22:03:28 on Apr 04,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.tb_alu(behavior)#1
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.alu(structure)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1_n(dataflow)#1
+# Loading work.adder_subtractor_n(structural)#1
+# Loading work.xorg_n(structural)#1
+# Loading work.xorg2(dataflow)#1
+# Loading work.adder_n(structural)#1
+# Loading work.fa(structural)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+# Loading work.logicunit(structural)#1
+# Loading work.andg_n(structural)#1
+# Loading work.org_n(structural)#1
+# Loading work.mux4t1_n(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_alu/s_Zero \
+sim:/tb_alu/s_Output \
+sim:/tb_alu/s_B \
+sim:/tb_alu/s_ALUCTL \
+sim:/tb_alu/s_A
+run 1000
+# ** Note: ALU ADD 5+3 PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD wraparound PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU ADD 0+0 PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB 8-3 PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB equal PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SUB underflow PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<1 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 1<<31 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL FF<<8 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLL 0<<31 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 80000000>>1 PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL FF000000>>8 PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL >>31 PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRL 1>>1 zero PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>1 PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA neg>>31 PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA pos>>1 PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SRA 1>>1 zero PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<2 PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 2<1 false PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT -1<1 PASS
+#    Time: 210 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT 1<-1 false PASS
+#    Time: 220 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLT equal false PASS
+#    Time: 230 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<2 PASS
+#    Time: 240 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU big<1 false PASS
+#    Time: 250 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU 1<big PASS
+#    Time: 260 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU SLTU equal false PASS
+#    Time: 270 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR mixed PASS
+#    Time: 280 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR same zero PASS
+#    Time: 290 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU XOR with zero PASS
+#    Time: 300 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR mixed PASS
+#    Time: 310 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR zeros PASS
+#    Time: 320 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU OR with zero PASS
+#    Time: 330 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND mixed PASS
+#    Time: 340 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND with zero PASS
+#    Time: 350 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU AND ones PASS
+#    Time: 360 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ equal PASS
+#    Time: 370 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BEQ not equal PASS
+#    Time: 380 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE equal PASS
+#    Time: 390 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BNE not equal PASS
+#    Time: 400 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 1<2 taken PASS
+#    Time: 410 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT 2<1 not taken PASS
+#    Time: 420 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLT -1<1 taken PASS
+#    Time: 430 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 2>=1 PASS
+#    Time: 440 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE equal PASS
+#    Time: 450 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGE 1<2 PASS
+#    Time: 460 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU 1<big taken PASS
+#    Time: 470 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BLTU big>=1 PASS
+#    Time: 480 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU big>=1 PASS
+#    Time: 490 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU BGEU 1<big PASS
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+# ** Note: ALU testbench complete
+#    Time: 500 ns  Iteration: 0  Instance: /tb_alu
+vsim -voptargs=+acc work.tb_bytemd
+# End time: 22:08:53 on Apr 04,2026, Elapsed time: 0:05:25
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb_bytemd 
+# Start time: 22:08:53 on Apr 04,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_bytemd(behavior)#1
+# Loading work.riscv_types(body)
+# Loading work.bytemd(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_bytemd/s_RS2 \
+sim:/tb_bytemd/s_mem \
+sim:/tb_bytemd/s_ByteOut \
+sim:/tb_bytemd/s_ByteOp \
+sim:/tb_bytemd/s_ByteAddr
+run 1000
+# ** Note: byteMd sw        PASS
+#    Time: 10 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=0  PASS
+#    Time: 20 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=1  PASS
+#    Time: 30 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=2  PASS
+#    Time: 40 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb off=3  PASS
+#    Time: 50 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lw        PASS
+#    Time: 60 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=0 PASS
+#    Time: 70 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=1 PASS
+#    Time: 80 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=2 PASS
+#    Time: 90 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu off=3 PASS
+#    Time: 100 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg0  PASS
+#    Time: 110 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  neg3  PASS
+#    Time: 120 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lb  pos   PASS
+#    Time: 130 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu low   PASS
+#    Time: 140 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lhu high  PASS
+#    Time: 150 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg   PASS
+#    Time: 160 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  neg2  PASS
+#    Time: 170 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lh  pos   PASS
+#    Time: 180 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd sb rt wr  PASS
+#    Time: 190 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: byteMd lbu rt rd PASS
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+# ** Note: tb_byteMd complete
+#    Time: 200 ns  Iteration: 0  Instance: /tb_bytemd
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_WRBCKSEL \
+vsim:/tb/MyRiscv/s_RS2Data \
+vsim:/tb/MyRiscv/s_RS1Data \
+vsim:/tb/MyRiscv/s_RS1_PC \
+vsim:/tb/MyRiscv/s_RegWrData \
+vsim:/tb/MyRiscv/s_RegWrAddr \
+vsim:/tb/MyRiscv/s_RegWr \
+vsim:/tb/MyRiscv/s_PCWriteBack \
+vsim:/tb/MyRiscv/s_PCNext \
+vsim:/tb/MyRiscv/s_PCFetch \
+vsim:/tb/MyRiscv/s_PC \
+vsim:/tb/MyRiscv/s_Ovfl \
+vsim:/tb/MyRiscv/s_jump \
+vsim:/tb/MyRiscv/s_jalr \
+vsim:/tb/MyRiscv/s_Inst \
+vsim:/tb/MyRiscv/s_IncPC \
+vsim:/tb/MyRiscv/s_Imm \
+vsim:/tb/MyRiscv/s_IMemAddr \
+vsim:/tb/MyRiscv/s_Halt \
+vsim:/tb/MyRiscv/s_DMemWr \
+vsim:/tb/MyRiscv/s_DMemOut \
+vsim:/tb/MyRiscv/s_DMemData \
+vsim:/tb/MyRiscv/s_DMemAddr \
+vsim:/tb/MyRiscv/s_CondMet \
+vsim:/tb/MyRiscv/s_byteOut \
+vsim:/tb/MyRiscv/s_byteOp \
+vsim:/tb/MyRiscv/s_BranchJumpAdded \
+vsim:/tb/MyRiscv/s_BranchJump \
+vsim:/tb/MyRiscv/s_branch \
+vsim:/tb/MyRiscv/s_B \
+vsim:/tb/MyRiscv/s_AUIPC \
+vsim:/tb/MyRiscv/s_ALUZero \
+vsim:/tb/MyRiscv/s_ALUSrc \
+vsim:/tb/MyRiscv/s_ALUOut \
+vsim:/tb/MyRiscv/s_ALUOp \
+vsim:/tb/MyRiscv/s_ALUCTL \
+vsim:/tb/MyRiscv/oALUOut \
+vsim:/tb/MyRiscv/iRST \
+vsim:/tb/MyRiscv/iInstLd \
+vsim:/tb/MyRiscv/iInstExt \
+vsim:/tb/MyRiscv/iInstAddr \
+vsim:/tb/MyRiscv/iCLK
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_jump \
+vsim:/tb/MyRiscv/s_jalr
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_RegWrData \
+vsim:/tb/MyRiscv/s_PCWriteBack \
+vsim:/tb/MyRiscv/s_PCNext \
+vsim:/tb/MyRiscv/s_PCFetch \
+vsim:/tb/MyRiscv/s_PC
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_BranchJumpAdded \
+vsim:/tb/MyRiscv/s_BranchJump
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_CondMet \
+vsim:/tb/MyRiscv/s_BranchJumpAdded \
+vsim:/tb/MyRiscv/s_BranchJump
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_CondMet \
+vsim:/tb/MyRiscv/s_BranchJumpAdded \
+vsim:/tb/MyRiscv/s_BranchJump
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_AUIPC
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_WRBCKSEL
+add wave -position insertpoint  \
+vsim1:/tb/MyRiscv/s_WRBCKSEL \
+vsim1:/tb/MyRiscv/s_RS2Data \
+vsim1:/tb/MyRiscv/s_RS1Data \
+vsim1:/tb/MyRiscv/s_RS1_PC \
+vsim1:/tb/MyRiscv/s_RegWrData \
+vsim1:/tb/MyRiscv/s_RegWrAddr \
+vsim1:/tb/MyRiscv/s_RegWr \
+vsim1:/tb/MyRiscv/s_PCWriteBack \
+vsim1:/tb/MyRiscv/s_PCNext \
+vsim1:/tb/MyRiscv/s_PCFetch \
+vsim1:/tb/MyRiscv/s_PC \
+vsim1:/tb/MyRiscv/s_Ovfl \
+vsim1:/tb/MyRiscv/s_jump \
+vsim1:/tb/MyRiscv/s_jalr \
+vsim1:/tb/MyRiscv/s_Inst \
+vsim1:/tb/MyRiscv/s_IncPC \
+vsim1:/tb/MyRiscv/s_Imm \
+vsim1:/tb/MyRiscv/s_IMemAddr \
+vsim1:/tb/MyRiscv/s_Halt \
+vsim1:/tb/MyRiscv/s_DMemWr \
+vsim1:/tb/MyRiscv/s_DMemOut \
+vsim1:/tb/MyRiscv/s_DMemData \
+vsim1:/tb/MyRiscv/s_DMemAddr \
+vsim1:/tb/MyRiscv/s_CondMet \
+vsim1:/tb/MyRiscv/s_byteOut \
+vsim1:/tb/MyRiscv/s_byteOp \
+vsim1:/tb/MyRiscv/s_BranchJumpAdded \
+vsim1:/tb/MyRiscv/s_BranchJump \
+vsim1:/tb/MyRiscv/s_branch \
+vsim1:/tb/MyRiscv/s_B \
+vsim1:/tb/MyRiscv/s_AUIPC \
+vsim1:/tb/MyRiscv/s_ALUZero \
+vsim1:/tb/MyRiscv/s_ALUSrc \
+vsim1:/tb/MyRiscv/s_ALUOut \
+vsim1:/tb/MyRiscv/s_ALUOp \
+vsim1:/tb/MyRiscv/s_ALUCTL \
+vsim1:/tb/MyRiscv/oALUOut \
+vsim1:/tb/MyRiscv/iRST \
+vsim1:/tb/MyRiscv/iInstLd \
+vsim1:/tb/MyRiscv/iInstExt \
+vsim1:/tb/MyRiscv/iInstAddr \
+vsim1:/tb/MyRiscv/iCLK
+add wave -position insertpoint  \
+vsim2:/tb/MyRiscv/s_WRBCKSEL \
+vsim2:/tb/MyRiscv/s_RS2Data \
+vsim2:/tb/MyRiscv/s_RS1Data \
+vsim2:/tb/MyRiscv/s_RS1_PC \
+vsim2:/tb/MyRiscv/s_RegWrData \
+vsim2:/tb/MyRiscv/s_RegWrAddr \
+vsim2:/tb/MyRiscv/s_RegWr \
+vsim2:/tb/MyRiscv/s_PCWriteBack \
+vsim2:/tb/MyRiscv/s_PCNext \
+vsim2:/tb/MyRiscv/s_PCFetch \
+vsim2:/tb/MyRiscv/s_PC \
+vsim2:/tb/MyRiscv/s_Ovfl \
+vsim2:/tb/MyRiscv/s_jump \
+vsim2:/tb/MyRiscv/s_jalr \
+vsim2:/tb/MyRiscv/s_Inst \
+vsim2:/tb/MyRiscv/s_IncPC \
+vsim2:/tb/MyRiscv/s_Imm \
+vsim2:/tb/MyRiscv/s_IMemAddr \
+vsim2:/tb/MyRiscv/s_Halt \
+vsim2:/tb/MyRiscv/s_DMemWr \
+vsim2:/tb/MyRiscv/s_DMemOut \
+vsim2:/tb/MyRiscv/s_DMemData \
+vsim2:/tb/MyRiscv/s_DMemAddr \
+vsim2:/tb/MyRiscv/s_CondMet \
+vsim2:/tb/MyRiscv/s_byteOut \
+vsim2:/tb/MyRiscv/s_byteOp \
+vsim2:/tb/MyRiscv/s_BranchJumpAdded \
+vsim2:/tb/MyRiscv/s_BranchJump \
+vsim2:/tb/MyRiscv/s_branch \
+vsim2:/tb/MyRiscv/s_B \
+vsim2:/tb/MyRiscv/s_AUIPC \
+vsim2:/tb/MyRiscv/s_ALUZero \
+vsim2:/tb/MyRiscv/s_ALUSrc \
+vsim2:/tb/MyRiscv/s_ALUOut \
+vsim2:/tb/MyRiscv/s_ALUOp \
+vsim2:/tb/MyRiscv/s_ALUCTL \
+vsim2:/tb/MyRiscv/oALUOut \
+vsim2:/tb/MyRiscv/iRST \
+vsim2:/tb/MyRiscv/iInstLd \
+vsim2:/tb/MyRiscv/iInstExt \
+vsim2:/tb/MyRiscv/iInstAddr \
+vsim2:/tb/MyRiscv/iCLK
+add wave -position insertpoint  \
+vsim3:/tb/MyRiscv/s_WRBCKSEL \
+vsim3:/tb/MyRiscv/s_RS2Data \
+vsim3:/tb/MyRiscv/s_RS1Data \
+vsim3:/tb/MyRiscv/s_RS1_PC \
+vsim3:/tb/MyRiscv/s_RegWrData \
+vsim3:/tb/MyRiscv/s_RegWrAddr \
+vsim3:/tb/MyRiscv/s_RegWr \
+vsim3:/tb/MyRiscv/s_PCWriteBack \
+vsim3:/tb/MyRiscv/s_PCNext \
+vsim3:/tb/MyRiscv/s_PCFetch \
+vsim3:/tb/MyRiscv/s_PC \
+vsim3:/tb/MyRiscv/s_Ovfl \
+vsim3:/tb/MyRiscv/s_jump \
+vsim3:/tb/MyRiscv/s_jalr \
+vsim3:/tb/MyRiscv/s_Inst \
+vsim3:/tb/MyRiscv/s_IncPC \
+vsim3:/tb/MyRiscv/s_Imm \
+vsim3:/tb/MyRiscv/s_IMemAddr \
+vsim3:/tb/MyRiscv/s_Halt \
+vsim3:/tb/MyRiscv/s_DMemWr \
+vsim3:/tb/MyRiscv/s_DMemOut \
+vsim3:/tb/MyRiscv/s_DMemData \
+vsim3:/tb/MyRiscv/s_DMemAddr \
+vsim3:/tb/MyRiscv/s_CondMet \
+vsim3:/tb/MyRiscv/s_byteOut \
+vsim3:/tb/MyRiscv/s_byteOp \
+vsim3:/tb/MyRiscv/s_BranchJumpAdded \
+vsim3:/tb/MyRiscv/s_BranchJump \
+vsim3:/tb/MyRiscv/s_branch \
+vsim3:/tb/MyRiscv/s_B \
+vsim3:/tb/MyRiscv/s_AUIPC \
+vsim3:/tb/MyRiscv/s_ALUZero \
+vsim3:/tb/MyRiscv/s_ALUSrc \
+vsim3:/tb/MyRiscv/s_ALUOut \
+vsim3:/tb/MyRiscv/s_ALUOp \
+vsim3:/tb/MyRiscv/s_ALUCTL \
+vsim3:/tb/MyRiscv/oALUOut \
+vsim3:/tb/MyRiscv/iRST \
+vsim3:/tb/MyRiscv/iInstLd \
+vsim3:/tb/MyRiscv/iInstExt \
+vsim3:/tb/MyRiscv/iInstAddr \
+vsim3:/tb/MyRiscv/iCLK
