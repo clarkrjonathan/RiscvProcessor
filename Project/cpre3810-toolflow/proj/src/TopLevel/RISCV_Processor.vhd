@@ -77,7 +77,7 @@ architecture structure of RISCV_Processor is
 
   component reg_N is
     generic(N       : integer := DATA_WIDTH;
-            RST_VAL : std_logic_vector(N-1 downto 0) := (others => '0'));
+            RST_VAL : std_logic_vector := (others => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
@@ -736,7 +736,7 @@ begin
   s_Imm_EX <= ex_Imm;
 
   reg_Imm_EX_MEM: reg_N
-    generic map(N => DATA_WIDTH, RST_VAL => (others => '0'))
+    generic map(N => DATA_WIDTH, RST_VAL => (DATA_WIDTH-1 downto 0 => '0'))
     port map(i_CLK => iCLK,
              i_RST => iRST,
              i_WE  => '1',

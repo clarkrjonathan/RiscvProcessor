@@ -110,7 +110,7 @@ architecture structure of ID_EX is
 
   component reg_N is
     generic(N       : integer := 32;
-            RST_VAL : std_logic_vector(N-1 downto 0) := (others => '0'));
+            RST_VAL : std_logic_vector := (others => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;

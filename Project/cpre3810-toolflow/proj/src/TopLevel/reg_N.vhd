@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 
 entity reg_N is
   generic(N		: integer := 32;
-  	  RST_VAL	: std_logic_vector(N-1 downto 0) := (others => '0'));  -- width of register
+  	  RST_VAL	: std_logic_vector := (others => '0'));  -- width of register
   port(
     i_CLK : in  std_logic;     -- clock
     i_RST : in  std_logic;     -- reset

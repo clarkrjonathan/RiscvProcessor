@@ -1,5 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+library work;
+use work.RISCV_types.all;
 
 entity regfile is
   port(
@@ -20,7 +22,7 @@ architecture structural of regfile is
   -- Component: N-bit register
   component reg_N
     generic(N : integer := 32;
-    	    RST_VAL	:	std_logic_vector(N-1 downto 0) := (others => '0'));
+    	    RST_VAL	:	std_logic_vector := (DATA_WIDTH-1 downto 0 => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
