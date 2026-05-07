@@ -3,115 +3,107 @@
 # CprE 381 toolflow Timing dump
 #
 
-FMax: 22.48mhz Clk Constraint: 20.00ns Slack: -24.49ns
+FMax: 48.85mhz Clk Constraint: 20.00ns Slack: -0.47ns
 
 The path is given below
 
  ===================================================================
- From Node    : reg_N:ProgramCounter|dffg:\GEN_REG:9:DFFI|s_Q
- To Node      : regfile:RegisterFile|reg_N:\GEN_REGS:22:REG_I|dffg:\GEN_REG:11:DFFI|s_Q
+ From Node    : ID_EX:IDEX_reg|reg_N:reg_RS2Data|dffg:\GEN_REG:0:DFFI|s_Q
+ To Node      : IF_ID:IFID_reg|reg_N:reg_Inst|dffg:\GEN_REG:31:DFFI|s_Q
  Launch Clock : iCLK
  Latch Clock  : iCLK
  Data Arrival Path:
  Total (ns)  Incr (ns)     Type  Element
  ==========  ========= ==  ====  ===================================
       0.000      0.000           launch edge time
-      3.093      3.093  R        clock network delay
-      3.325      0.232     uTco  reg_N:ProgramCounter|dffg:\GEN_REG:9:DFFI|s_Q
-      3.325      0.000 FF  CELL  ProgramCounter|\GEN_REG:9:DFFI|s_Q|q
-      3.708      0.383 FF    IC  s_IMemAddr[9]~2|datad
-      3.833      0.125 FF  CELL  s_IMemAddr[9]~2|combout
-      5.036      1.203 FF    IC  IMem|ram~35125|dataa
-      5.427      0.391 FR  CELL  IMem|ram~35125|combout
-      6.434      1.007 RR    IC  IMem|ram~35126|datab
-      6.852      0.418 RR  CELL  IMem|ram~35126|combout
-      7.225      0.373 RR    IC  IMem|ram~35127|datad
-      7.380      0.155 RR  CELL  IMem|ram~35127|combout
-      7.615      0.235 RR    IC  IMem|ram~35130|datab
-      8.033      0.418 RR  CELL  IMem|ram~35130|combout
-     13.185      5.152 RR    IC  IMem|ram~35141|datab
-     13.587      0.402 RR  CELL  IMem|ram~35141|combout
-     13.823      0.236 RR    IC  IMem|ram~35152|dataa
-     14.251      0.428 RF  CELL  IMem|ram~35152|combout
-     14.483      0.232 FF    IC  IMem|ram~35153|datac
-     14.764      0.281 FF  CELL  IMem|ram~35153|combout
-     14.997      0.233 FF    IC  IMem|ram~35196|datac
-     15.278      0.281 FF  CELL  IMem|ram~35196|combout
-     15.546      0.268 FF    IC  IMem|ram~35367|datab
-     15.971      0.425 FF  CELL  IMem|ram~35367|combout
-     16.198      0.227 FF    IC  IMem|ram~35538|datad
-     16.348      0.150 FR  CELL  IMem|ram~35538|combout
-     17.008      0.660 RR    IC  ControlMod|STD_MATCH~4|datac
-     17.295      0.287 RR  CELL  ControlMod|STD_MATCH~4|combout
-     17.559      0.264 RR    IC  ControlMod|STD_MATCH~6|datab
-     17.920      0.361 RR  CELL  ControlMod|STD_MATCH~6|combout
-     18.657      0.737 RR    IC  ControlMod|controlOutput~3|datac
-     18.927      0.270 RF  CELL  ControlMod|controlOutput~3|combout
-     19.156      0.229 FF    IC  ControlMod|controlOutput~4|datad
-     19.281      0.125 FF  CELL  ControlMod|controlOutput~4|combout
-     19.985      0.704 FF    IC  ControlMod|controlOutput~5|datac
-     20.266      0.281 FF  CELL  ControlMod|controlOutput~5|combout
-     20.544      0.278 FF    IC  ControlMod|controlOutput~31|datab
-     20.969      0.425 FF  CELL  ControlMod|controlOutput~31|combout
-     21.234      0.265 FF    IC  RISCVALU|U_barrelShifter|Equal32~0|datac
-     21.495      0.261 FR  CELL  RISCVALU|U_barrelShifter|Equal32~0|combout
-     21.746      0.251 RR    IC  RISCVALU|U_barrelShifter|Equal32~1|datac
-     22.033      0.287 RR  CELL  RISCVALU|U_barrelShifter|Equal32~1|combout
-     23.199      1.166 RR    IC  RISCVALU|U_barrelShifter|MUX_S0|o_O[13]~10|datad
-     23.338      0.139 RF  CELL  RISCVALU|U_barrelShifter|MUX_S0|o_O[13]~10|combout
-     23.633      0.295 FF    IC  RISCVALU|U_barrelShifter|MUX_S0|o_O[13]~47|datab
-     24.026      0.393 FF  CELL  RISCVALU|U_barrelShifter|MUX_S0|o_O[13]~47|combout
-     24.796      0.770 FF    IC  RISCVALU|U_barrelShifter|MUX_S1|o_O[13]~5|dataa
-     25.200      0.404 FF  CELL  RISCVALU|U_barrelShifter|MUX_S1|o_O[13]~5|combout
-     25.491      0.291 FF    IC  RISCVALU|U_barrelShifter|MUX_S2|o_O[13]~30|datab
-     25.895      0.404 FF  CELL  RISCVALU|U_barrelShifter|MUX_S2|o_O[13]~30|combout
-     26.145      0.250 FF    IC  RISCVALU|U_barrelShifter|MUX_S4|o_O[5]~33|datad
-     26.270      0.125 FF  CELL  RISCVALU|U_barrelShifter|MUX_S4|o_O[5]~33|combout
-     26.990      0.720 FF    IC  RISCVALU|U_barrelShifter|MUX_S4|o_O[5]~34|datac
-     27.271      0.281 FF  CELL  RISCVALU|U_barrelShifter|MUX_S4|o_O[5]~34|combout
-     27.511      0.240 FF    IC  RISCVALU|U_selectMux|o_O[5]~47|datad
-     27.636      0.125 FF  CELL  RISCVALU|U_selectMux|o_O[5]~47|combout
-     28.001      0.365 FF    IC  RISCVALU|U_selectMux|o_O[5]~48|datad
-     28.126      0.125 FF  CELL  RISCVALU|U_selectMux|o_O[5]~48|combout
-     30.236      2.110 FF    IC  DMem|ram~47622|dataa
-     30.648      0.412 FR  CELL  DMem|ram~47622|combout
-     31.887      1.239 RR    IC  DMem|ram~47623|dataa
-     32.304      0.417 RR  CELL  DMem|ram~47623|combout
-     36.306      4.002 RR    IC  DMem|ram~47626|datad
-     36.461      0.155 RR  CELL  DMem|ram~47626|combout
-     36.696      0.235 RR    IC  DMem|ram~47629|dataa
-     37.113      0.417 RR  CELL  DMem|ram~47629|combout
-     37.317      0.204 RR    IC  DMem|ram~47630|datad
-     37.472      0.155 RR  CELL  DMem|ram~47630|combout
-     37.675      0.203 RR    IC  DMem|ram~47641|datac
-     37.945      0.270 RF  CELL  DMem|ram~47641|combout
-     38.179      0.234 FF    IC  DMem|ram~47642|datac
-     38.460      0.281 FF  CELL  DMem|ram~47642|combout
-     39.161      0.701 FF    IC  DMem|ram~47643|datac
-     39.442      0.281 FF  CELL  DMem|ram~47643|combout
-     39.674      0.232 FF    IC  DMem|ram~47814|datac
-     39.955      0.281 FF  CELL  DMem|ram~47814|combout
-     40.198      0.243 FF    IC  ByteModule|s_SelectedMemByte~7|datac
-     40.479      0.281 FF  CELL  ByteModule|s_SelectedMemByte~7|combout
-     40.760      0.281 FF    IC  ByteModule|o_ByteOut[11]~95|datab
-     41.153      0.393 FF  CELL  ByteModule|o_ByteOut[11]~95|combout
-     41.380      0.227 FF    IC  ByteModule|o_ByteOut[11]~96|datad
-     41.505      0.125 FF  CELL  ByteModule|o_ByteOut[11]~96|combout
-     44.250      2.745 FF    IC  WriteBackMux|o_O[11]~61|datad
-     44.375      0.125 FF  CELL  WriteBackMux|o_O[11]~61|combout
-     44.604      0.229 FF    IC  WriteBackMux|o_O[11]~62|datad
-     44.729      0.125 FF  CELL  WriteBackMux|o_O[11]~62|combout
-     47.489      2.760 FF    IC  RegisterFile|\GEN_REGS:22:REG_I|\GEN_REG:11:DFFI|s_Q|asdata
-     47.890      0.401 FF  CELL  regfile:RegisterFile|reg_N:\GEN_REGS:22:REG_I|dffg:\GEN_REG:11:DFFI|s_Q
+      3.084      3.084  R        clock network delay
+      3.316      0.232     uTco  ID_EX:IDEX_reg|reg_N:reg_RS2Data|dffg:\GEN_REG:0:DFFI|s_Q
+      3.316      0.000 RR  CELL  IDEX_reg|reg_RS2Data|\GEN_REG:0:DFFI|s_Q|q
+      4.304      0.988 RR    IC  ALUSourceMux|o_O[0]~29|datad
+      4.459      0.155 RR  CELL  ALUSourceMux|o_O[0]~29|combout
+      5.121      0.662 RR    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:0:U_FA|AND1|o_F|datad
+      5.260      0.139 RF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:0:U_FA|AND1|o_F|combout
+      5.518      0.258 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:1:U_FA|OR1|o_F~0|datac
+      5.798      0.280 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:1:U_FA|OR1|o_F~0|combout
+      6.046      0.248 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:2:U_FA|OR1|o_F~0|datad
+      6.171      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:2:U_FA|OR1|o_F~0|combout
+      6.421      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:3:U_FA|OR1|o_F~0|datad
+      6.546      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:3:U_FA|OR1|o_F~0|combout
+      6.796      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:4:U_FA|OR1|o_F~0|datad
+      6.921      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:4:U_FA|OR1|o_F~0|combout
+      7.176      0.255 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:5:U_FA|OR1|o_F~0|datac
+      7.457      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:5:U_FA|OR1|o_F~0|combout
+      7.707      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:6:U_FA|OR1|o_F~0|datad
+      7.832      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:6:U_FA|OR1|o_F~0|combout
+      8.082      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:7:U_FA|OR1|o_F~0|datad
+      8.207      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:7:U_FA|OR1|o_F~0|combout
+      8.457      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:8:U_FA|OR1|o_F~0|datad
+      8.582      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:8:U_FA|OR1|o_F~0|combout
+      8.830      0.248 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:9:U_FA|OR1|o_F~0|datad
+      8.955      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:9:U_FA|OR1|o_F~0|combout
+      9.210      0.255 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:10:U_FA|OR1|o_F~0|datac
+      9.491      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:10:U_FA|OR1|o_F~0|combout
+      9.743      0.252 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:11:U_FA|OR1|o_F~0|datad
+      9.868      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:11:U_FA|OR1|o_F~0|combout
+     10.118      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:12:U_FA|OR1|o_F~0|datad
+     10.243      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:12:U_FA|OR1|o_F~0|combout
+     10.500      0.257 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:13:U_FA|OR1|o_F~0|datac
+     10.781      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:13:U_FA|OR1|o_F~0|combout
+     11.030      0.249 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:14:U_FA|OR1|o_F~0|datad
+     11.155      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:14:U_FA|OR1|o_F~0|combout
+     11.583      0.428 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:15:U_FA|OR1|o_F~0|datad
+     11.708      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:15:U_FA|OR1|o_F~0|combout
+     11.958      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:16:U_FA|OR1|o_F~0|datad
+     12.083      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:16:U_FA|OR1|o_F~0|combout
+     12.331      0.248 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:17:U_FA|OR1|o_F~0|datad
+     12.456      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:17:U_FA|OR1|o_F~0|combout
+     12.704      0.248 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:18:U_FA|OR1|o_F~0|datad
+     12.829      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:18:U_FA|OR1|o_F~0|combout
+     13.079      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:19:U_FA|OR1|o_F~0|datad
+     13.204      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:19:U_FA|OR1|o_F~0|combout
+     13.454      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:20:U_FA|OR1|o_F~0|datad
+     13.579      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:20:U_FA|OR1|o_F~0|combout
+     13.830      0.251 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:21:U_FA|OR1|o_F~0|datad
+     13.955      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:21:U_FA|OR1|o_F~0|combout
+     14.205      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:22:U_FA|OR1|o_F~0|datad
+     14.330      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:22:U_FA|OR1|o_F~0|combout
+     14.580      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:23:U_FA|OR1|o_F~0|datad
+     14.705      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:23:U_FA|OR1|o_F~0|combout
+     14.954      0.249 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:24:U_FA|OR1|o_F~0|datad
+     15.079      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:24:U_FA|OR1|o_F~0|combout
+     15.336      0.257 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:25:U_FA|OR1|o_F~0|datac
+     15.617      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:25:U_FA|OR1|o_F~0|combout
+     15.874      0.257 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:26:U_FA|OR1|o_F~0|datac
+     16.155      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:26:U_FA|OR1|o_F~0|combout
+     16.410      0.255 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:27:U_FA|OR1|o_F~0|datac
+     16.691      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:27:U_FA|OR1|o_F~0|combout
+     16.941      0.250 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:28:U_FA|OR1|o_F~0|datad
+     17.066      0.125 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:28:U_FA|OR1|o_F~0|combout
+     17.322      0.256 FF    IC  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:29:U_FA|OR1|o_F~0|datac
+     17.603      0.281 FF  CELL  RISCVALU|U_adderSubtractor|U_ADDER|\gen_FA:29:U_FA|OR1|o_F~0|combout
+     17.862      0.259 FF    IC  RISCVALU|U_selectMux|o_O[31]~352|datac
+     18.142      0.280 FF  CELL  RISCVALU|U_selectMux|o_O[31]~352|combout
+     18.765      0.623 FF    IC  RISCVALU|U_selectMux|o_O[31]~305|datad
+     18.915      0.150 FR  CELL  RISCVALU|U_selectMux|o_O[31]~305|combout
+     19.120      0.205 RR    IC  RISCVALU|U_selectMux|o_O[31]~306|datad
+     19.259      0.139 RF  CELL  RISCVALU|U_selectMux|o_O[31]~306|combout
+     19.486      0.227 FF    IC  RISCVALU|U_selectMux|o_O[31]~307|datad
+     19.611      0.125 FF  CELL  RISCVALU|U_selectMux|o_O[31]~307|combout
+     19.876      0.265 FF    IC  s_BranchJump_EX~0|datac
+     20.156      0.280 FF  CELL  s_BranchJump_EX~0|combout
+     20.451      0.295 FF    IC  s_BranchJump_EX|datad
+     20.576      0.125 FF  CELL  s_BranchJump_EX|combout
+     22.850      2.274 FF    IC  IFID_reg|reg_Inst|\GEN_REG:31:DFFI|s_Q|sclr
+     23.430      0.580 FR  CELL  IF_ID:IFID_reg|reg_N:reg_Inst|dffg:\GEN_REG:31:DFFI|s_Q
  Data Required Path:
  Total (ns)  Incr (ns)     Type  Element
  ==========  ========= ==  ====  ===================================
      20.000     20.000           latch edge time
-     23.393      3.393  R        clock network delay
-     23.401      0.008           clock pessimism removed
-     23.381     -0.020           clock uncertainty
-     23.399      0.018     uTsu  regfile:RegisterFile|reg_N:\GEN_REGS:22:REG_I|dffg:\GEN_REG:11:DFFI|s_Q
- Data Arrival Time  :    47.890
- Data Required Time :    23.399
- Slack              :   -24.491 (VIOLATED)
+     22.953      2.953  R        clock network delay
+     22.961      0.008           clock pessimism removed
+     22.941     -0.020           clock uncertainty
+     22.959      0.018     uTsu  IF_ID:IFID_reg|reg_N:reg_Inst|dffg:\GEN_REG:31:DFFI|s_Q
+ Data Arrival Time  :    23.430
+ Data Required Time :    22.959
+ Slack              :    -0.471 (VIOLATED)
  ===================================================================
