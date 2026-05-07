@@ -20,7 +20,7 @@ architecture structural of regfile is
   -- Component: N-bit register
   component reg_N
     generic(N : integer := 32;
-    	    RST_VAL	:	std_logic_vector(N-1 downto 0) := (others => '0'));
+    	    RST_VAL : std_logic_vector := (0 => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
@@ -83,7 +83,7 @@ begin
   
   -- Register 0: Hardwired to zero (reset always active)
   REG_0: reg_N
-    generic map(N => 32)
+    generic map(N => 32, RST_VAL => x"00000000")
     port map(
       i_CLK => i_CLK,
       i_RST => '1',              -- Always in reset to maintain zero
@@ -113,7 +113,7 @@ begin
 
 	    REG_NORMAL: if i /= 2 generate
 		REG_I: reg_N
-		    generic map(N => 32)
+		    generic map(N => 32, RST_VAL => x"00000000")
 		    port map(
 		        i_CLK => i_CLK,
 		        i_RST => i_RST,
