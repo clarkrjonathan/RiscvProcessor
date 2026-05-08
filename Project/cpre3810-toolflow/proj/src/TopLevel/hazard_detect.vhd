@@ -285,23 +285,28 @@ begin
 
   -- RS1 vs IDEX
   gate_RS1_IDEX_ab:   andg2 port map(i_A => s_IFID_usesRS1,   i_B => s_RS1_valid,
-                                     o_F => s_RS1_IDEX_ab);
+                                     o_F => s_RS1_IDEX_ab); -- Is rs1 nonzero and actually consumed as reg
   gate_RS1_IDEX_cd:   andg2 port map(i_A => s_IDEX_RD_valid,  i_B => s_IDEX_writesRD,
-                                     o_F => s_RS1_IDEX_cd);
+                                     o_F => s_RS1_IDEX_cd); -- is rd from idex nonzero and actually produced
   gate_RS1_IDEX_abcd: andg2 port map(i_A => s_RS1_IDEX_ab,    i_B => s_RS1_IDEX_cd,
                                      o_F => s_RS1_IDEX_abcd);
+                                     
+--is rs1 a raw with the id/ex reg
   gate_RS1_IDEX_raw:  andg2 port map(i_A => s_RS1_IDEX_abcd,  i_B => s_RS1_match_IDEX,
-                                     o_F => s_RS1_IDEX_raw);
+                                     o_F => s_RS1_IDEX_raw); -- is rs1 valid, nonzero, is rd valid, nonzero and
+                                     				--are they the same address
 
   -- RS2 vs IDEX
   gate_RS2_IDEX_ab:   andg2 port map(i_A => s_IFID_usesRS2,   i_B => s_RS2_valid,
-                                     o_F => s_RS2_IDEX_ab);
+                                     o_F => s_RS2_IDEX_ab); -- Is rs2 nonzero and actually consumed as reg
   gate_RS2_IDEX_cd:   andg2 port map(i_A => s_IDEX_RD_valid,  i_B => s_IDEX_writesRD,
-                                     o_F => s_RS2_IDEX_cd);
+                                     o_F => s_RS2_IDEX_cd); -- is rd from idex nonzero and actually produced
   gate_RS2_IDEX_abcd: andg2 port map(i_A => s_RS2_IDEX_ab,    i_B => s_RS2_IDEX_cd,
-                                     o_F => s_RS2_IDEX_abcd);
+                                     o_F => s_RS2_IDEX_abcd); --both above true
+  --is rs2 a raw with the id/ex reg
   gate_RS2_IDEX_raw:  andg2 port map(i_A => s_RS2_IDEX_abcd,  i_B => s_RS2_match_IDEX,
-                                     o_F => s_RS2_IDEX_raw);
+                                     o_F => s_RS2_IDEX_raw); -- is rs2 valid, nonzero, is rd valid, nonzero and
+                                     				--are they the same address
 
   -- RS1 vs EXMEM
   gate_RS1_EXMEM_ab:   andg2 port map(i_A => s_IFID_usesRS1,   i_B => s_RS1_valid,
