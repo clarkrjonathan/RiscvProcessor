@@ -58,7 +58,7 @@ architecture structure of MEM_WB is
 
   component reg_N is
     generic(N       : integer := 32;
-            RST_VAL : std_logic_vector := (others => '0'));
+            RST_VAL : std_logic_vector := (0 => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;

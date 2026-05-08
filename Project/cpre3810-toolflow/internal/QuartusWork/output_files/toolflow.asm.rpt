@@ -1,5 +1,5 @@
 Assembler report for toolflow
-Tue May  5 16:59:00 2026
+Thu May  7 22:27:49 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue May  5 16:59:00 2026 ;
+; Assembler Status      ; Successful - Thu May  7 22:27:49 2026 ;
 ; Revision Name         ; toolflow                              ;
 ; Top-level Entity Name ; RISCV_Processor                       ;
 ; Family                ; Cyclone IV E                          ;
@@ -93,8 +93,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-----------------------+
 ; Option         ; Setting               ;
 +----------------+-----------------------+
-; JTAG usercode  ; 0x03704B55            ;
-; Checksum       ; 0x03704B55            ;
+; JTAG usercode  ; 0x0373929F            ;
+; Checksum       ; 0x0373929F            ;
 +----------------+-----------------------+
 
 
@@ -118,15 +118,15 @@ Info: Running Quartus Prime Assembler
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue May  5 16:58:53 2026
+    Info: Processing started: Thu May  7 22:27:41 2026
 Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off toolflow -c toolflow
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 828 megabytes
-    Info: Processing ended: Tue May  5 16:59:00 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Thu May  7 22:27:49 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

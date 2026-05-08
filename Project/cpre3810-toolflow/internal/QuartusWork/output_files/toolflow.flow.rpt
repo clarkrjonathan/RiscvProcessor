@@ -1,5 +1,5 @@
 Flow report for toolflow
-Tue May  5 16:59:31 2026
+Thu May  7 22:28:27 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Standard Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue May  5 16:59:00 2026           ;
+; Flow Status                        ; Successful - Thu May  7 22:27:49 2026           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Standard Edition ;
 ; Revision Name                      ; toolflow                                        ;
 ; Top-level Entity Name              ; RISCV_Processor                                 ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 81,428 / 114,480 ( 71 % )                       ;
-;     Total combinational functions  ; 48,616 / 114,480 ( 42 % )                       ;
+; Total logic elements               ; 81,429 / 114,480 ( 71 % )                       ;
+;     Total combinational functions  ; 48,468 / 114,480 ( 42 % )                       ;
 ;     Dedicated logic registers      ; 67,116 / 114,480 ( 59 % )                       ;
 ; Total registers                    ; 67116                                           ;
 ; Total pins                         ; 99 / 529 ( 19 % )                               ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/05/2026 16:43:29 ;
+; Start date & time ; 05/07/2026 22:12:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; toolflow            ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 345052162815.177801740901023           ; --            ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 345052158487.177820994234340           ; --            ; --              ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; RISCV_Processor ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; RISCV_Processor ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; RISCV_Processor ; Top        ;
@@ -91,11 +91,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:01     ; 1.0                     ; 1155 MB             ; 00:02:05                           ;
-; Fitter               ; 00:12:59     ; 1.1                     ; 2534 MB             ; 00:23:35                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 828 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:30     ; 1.5                     ; 1701 MB             ; 00:00:41                           ;
-; Total                ; 00:15:37     ; --                      ; --                  ; 00:26:27                           ;
+; Analysis & Synthesis ; 00:02:06     ; 1.0                     ; 1156 MB             ; 00:02:01                           ;
+; Fitter               ; 00:12:50     ; 1.1                     ; 2543 MB             ; 00:34:16                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 828 MB              ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:37     ; 1.6                     ; 1695 MB             ; 00:00:50                           ;
+; Total                ; 00:15:41     ; --                      ; --                  ; 00:37:14                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,10 +104,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+---------------------------------+---------+------------+----------------+
 ; Module Name          ; Machine Hostname                ; OS Name ; OS Version ; Processor type ;
 +----------------------+---------------------------------+---------+------------+----------------+
-; Analysis & Synthesis ; linuxvdi-f25-20.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
-; Fitter               ; linuxvdi-f25-20.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
-; Assembler            ; linuxvdi-f25-20.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
-; Timing Analyzer      ; linuxvdi-f25-20.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
+; Analysis & Synthesis ; linuxvdi-f25-18.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
+; Fitter               ; linuxvdi-f25-18.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
+; Assembler            ; linuxvdi-f25-18.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
+; Timing Analyzer      ; linuxvdi-f25-18.ece.iastate.edu ; Red Hat ; Red Hat    ; x86_64         ;
 +----------------------+---------------------------------+---------+------------+----------------+
 
 

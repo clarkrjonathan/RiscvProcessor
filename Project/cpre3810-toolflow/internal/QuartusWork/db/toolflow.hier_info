@@ -2255,7 +2255,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|reg_N:ProgramCounter|dffg:\GEN_REG:9:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.PRESET
+i_RST => s_Q.ACLR
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
@@ -2359,7 +2359,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|reg_N:ProgramCounter|dffg:\GEN_REG:22:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.ACLR
+i_RST => s_Q.PRESET
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
@@ -6795,7 +6795,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|regfile:RegisterFile|reg_N:\GEN_REGS:2:REG_SP:REG_I|dffg:\GEN_REG:1:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.PRESET
+i_RST => s_Q.ACLR
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
@@ -6883,7 +6883,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|regfile:RegisterFile|reg_N:\GEN_REGS:2:REG_SP:REG_I|dffg:\GEN_REG:12:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.PRESET
+i_RST => s_Q.ACLR
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
@@ -6939,7 +6939,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|regfile:RegisterFile|reg_N:\GEN_REGS:2:REG_SP:REG_I|dffg:\GEN_REG:19:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.ACLR
+i_RST => s_Q.PRESET
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
@@ -7027,7 +7027,7 @@ o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE
 
 |RISCV_Processor|regfile:RegisterFile|reg_N:\GEN_REGS:2:REG_SP:REG_I|dffg:\GEN_REG:30:DFFI
 i_CLK => s_Q.CLK
-i_RST => s_Q.ACLR
+i_RST => s_Q.PRESET
 i_WE => s_Q.ENA
 i_D => s_Q.DATAIN
 o_Q <= s_Q.DB_MAX_OUTPUT_PORT_TYPE

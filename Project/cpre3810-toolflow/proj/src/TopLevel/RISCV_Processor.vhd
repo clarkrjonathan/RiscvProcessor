@@ -77,7 +77,7 @@ architecture structure of RISCV_Processor is
 
   component reg_N is
     generic(N       : integer := DATA_WIDTH;
-            RST_VAL : std_logic_vector := (others => '0'));
+            RST_VAL : std_logic_vector := (0 => '0'));
     port(
       i_CLK : in  std_logic;
       i_RST : in  std_logic;
@@ -534,7 +534,7 @@ begin
   -- Squashed when a branch/jump resolves in EX (2-bubble penalty).
   -- WE tied '1' for software-scheduled version.
   ---------------------------------------------------------------------------
-  s_IF_ID_Squash <= s_BranchJump_EX;
+  s_IF_ID_Squash <= '0';
 
   IFID_reg: IF_ID
     generic map(
@@ -601,7 +601,7 @@ begin
   -- Squashed on branch/jump resolve (same cycle as IF/ID squash).
   -- Forwarding ports tied inactive for SW-scheduled version.
   ---------------------------------------------------------------------------
-  s_ID_EX_Squash <= s_BranchJump_EX;
+  s_ID_EX_Squash <= '0';
 
   IDEX_reg: ID_EX
     generic map(
@@ -736,7 +736,7 @@ begin
   s_Imm_EX <= ex_Imm;
 
   reg_Imm_EX_MEM: reg_N
-    generic map(N => DATA_WIDTH, RST_VAL => (DATA_WIDTH-1 downto 0 => '0'))
+    generic map(N => DATA_WIDTH, RST_VAL => x"00000000")
     port map(i_CLK => iCLK,
              i_RST => iRST,
              i_WE  => '1',
