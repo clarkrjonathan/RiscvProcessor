@@ -1,0 +1,41 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 linux_x86_64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_WRBCKSEL_d
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_RegWrData
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_PCFetch
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/oALUOut
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_ALU_A
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_ALU_B
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_RS2Data \
+vsim:/tb/MyRiscv/ex_RS1Data
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_ALUCTL
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_ALUCTL
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_Inst
+add wave -position insertpoint  \
+vsim:/tb/CLK
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_Inst
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/id_Inst

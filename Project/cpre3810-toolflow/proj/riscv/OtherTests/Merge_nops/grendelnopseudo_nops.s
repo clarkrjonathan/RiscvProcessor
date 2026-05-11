@@ -33,7 +33,6 @@ res_idx:
     nop
     nop
     nop
-    nop
     addi sp, sp, 0x000
     addi fp, x0, 0
 
@@ -54,7 +53,6 @@ pump:
 
 main:
     addi sp, sp, -40
-    nop
     nop
     nop
     nop
@@ -80,10 +78,8 @@ trucks:
     nop
     nop
     nop
-    nop
     andi t2, t2, 0xff
 
-    nop
     nop
     nop
     nop
@@ -104,9 +100,7 @@ kick:
     nop
     nop
     nop
-    nop
     addi t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -117,10 +111,8 @@ main_loop_control:
     nop
     nop
     nop
-    nop
     slti t2, t2, 4
 
-    nop
     nop
     nop
     nop
@@ -142,9 +134,7 @@ wave:
     nop
     nop
     nop
-    nop
     addi t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -155,15 +145,12 @@ welcome:
     nop
     nop
     nop
-    nop
     slti t2, t2, 4
-    nop
     nop
     nop
     nop
     xori t2, t2, 1
 
-    nop
     nop
     nop
     nop
@@ -177,12 +164,10 @@ welcome:
     nop
     nop
     nop
-    nop
     lw ra, 36(sp)
     lw fp, 32(sp)
     addi sp, sp, 40
 
-    nop
     nop
     jalr x0, 0(ra)
     nop
@@ -205,10 +190,8 @@ new:
     nop
     nop
     nop
-    nop
     andi t2, t2, 0x0ff
 
-    nop
     nop
     nop
     nop
@@ -229,7 +212,6 @@ tasteful:
     nop
     nop
     nop
-    nop
     addi t4, t2, 0
 
     lasw ra, badge
@@ -247,7 +229,6 @@ turkey:
     nop
     nop
     nop
-    nop
     beq t3, t2, telling
     nop
     nop
@@ -260,10 +241,8 @@ telling:
     nop
     nop
     nop
-    nop
     lw t2, 0(t2)
 
-    nop
     nop
     nop
     nop
@@ -281,14 +260,11 @@ telling:
     nop
     nop
     nop
-    nop
     srli t3, t3, 1
     nop
     nop
     nop
-    nop
     srai t3, t3, 1
-    nop
     nop
     nop
     nop
@@ -300,7 +276,6 @@ telling:
     nop
     nop
     nop
-    nop
     sub t6, x0, t6
 
     lasw t2, res
@@ -309,10 +284,8 @@ telling:
     nop
     nop
     nop
-    nop
     addi a1, t0, -1
 
-    nop
     nop
     nop
     nop
@@ -321,16 +294,13 @@ telling:
     nop
     nop
     nop
-    nop
     add t2, t4, t6
-    nop
     nop
     nop
     nop
     add t2, t3, t2
 
     lw t3, 48(fp)
-    nop
     nop
     nop
     nop
@@ -341,12 +311,10 @@ telling:
     nop
     nop
     nop
-    nop
     lw ra, 44(sp)
     lw fp, 40(sp)
     addi sp, sp, 48
 
-    nop
     nop
     jalr x0, 0(ra)
     nop
@@ -361,12 +329,10 @@ topsort:
     nop
     nop
     nop
-    nop
     sw ra, 44(sp)
     sw fp, 40(sp)
     add fp, sp, x0
 
-    nop
     nop
     nop
     nop
@@ -383,7 +349,6 @@ verse:
     lw t5, 48(fp)
     nop
     nop
-    nop
     addi t4, t2, 0
 
     lasw ra, joyous
@@ -393,7 +358,6 @@ verse:
 
 joyous:
     addi t2, fp, 28
-    nop
     nop
     nop
     nop
@@ -419,11 +383,9 @@ iterate_edges:
     nop
     nop
     nop
-    nop
     sw fp, 20(sp)
     add fp, sp, x0
 
-    nop
     nop
     nop
     nop
@@ -433,7 +395,6 @@ iterate_edges:
     sw t5, 28(fp)
 
     lw t2, 28(fp)
-    nop
     nop
     nop
     nop
@@ -447,14 +408,12 @@ iterate_edges:
 
     nop
     nop
-    nop
     sw t4, 0(t2)
     sw t3, 4(t2)
 
     lw t2, 24(fp)
 
     addi sp, fp, 0
-    nop
     nop
     nop
     nop
@@ -470,9 +429,7 @@ iterate_edges:
 # -------------------------
 
 next_edge:
-    nop
     addi sp, sp, -32
-    nop
     nop
     nop
     nop
@@ -480,7 +437,6 @@ next_edge:
     sw fp, 24(sp)
     add fp, x0, sp
 
-    nop
     nop
     nop
     nop
@@ -499,17 +455,14 @@ snail:
     nop
     nop
     nop
-    nop
     lw t3, 0(t2)
 
     lw t2, 32(fp)
     nop
     nop
     nop
-    nop
     lw t2, 4(t2)
 
-    nop
     nop
     nop
     nop
@@ -530,16 +483,13 @@ induce:
     nop
     nop
     nop
-    nop
     lw t2, 4(t2)
-    nop
     nop
     nop
     nop
     addi t4, t2, 1
 
     lw t3, 32(fp)
-    nop
     nop
     nop
     nop
@@ -554,16 +504,13 @@ quarter:
     nop
     nop
     nop
-    nop
     lw t2, 4(t2)
-    nop
     nop
     nop
     nop
     addi t3, t2, 1
 
     lw t2, 32(fp)
-    nop
     nop
     nop
     nop
@@ -574,16 +521,13 @@ waggish:
     nop
     nop
     nop
-    nop
     lw t2, 4(t2)
 
     nop
     nop
     nop
-    nop
     slti t2, t2, 4
 
-    nop
     nop
     nop
     nop
@@ -602,12 +546,10 @@ cynical:
     nop
     nop
     nop
-    nop
     lw ra, 28(sp)
     lw fp, 24(sp)
     addi sp, sp, 32
 
-    nop
     nop
     jalr x0, 0(ra)
     nop
@@ -622,11 +564,9 @@ has_edge:
     nop
     nop
     nop
-    nop
     sw fp, 28(sp)
     add fp, sp, x0
 
-    nop
     nop
     nop
     nop
@@ -639,9 +579,7 @@ has_edge:
     nop
     nop
     nop
-    nop
     slli t3, t3, 2
-    nop
     nop
     nop
     nop
@@ -650,16 +588,13 @@ has_edge:
     nop
     nop
     nop
-    nop
     lw t2, 0(t2)
-    nop
     nop
     nop
     nop
     sw t2, 16(fp)
 
     addi t2, x0, 1
-    nop
     nop
     nop
     nop
@@ -676,9 +611,7 @@ look:
     nop
     nop
     nop
-    nop
     slli t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -688,9 +621,7 @@ look:
     nop
     nop
     nop
-    nop
     addi t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -703,10 +634,8 @@ measley:
     nop
     nop
     nop
-    nop
     slt t2, t3, t2
 
-    nop
     nop
     nop
     nop
@@ -724,9 +653,7 @@ experience:
     nop
     nop
     nop
-    nop
     and t2, t3, t2
-    nop
     nop
     nop
     nop
@@ -734,11 +661,9 @@ experience:
     nop
     nop
     nop
-    nop
     andi t2, t2, 0xff
 
     addi sp, fp, 0
-    nop
     nop
     nop
     nop
@@ -754,9 +679,7 @@ experience:
 # -------------------------
 
 mark_visited:
-    nop
     addi sp, sp, -32
-    nop
     nop
     nop
     nop
@@ -766,11 +689,9 @@ mark_visited:
     nop
     nop
     nop
-    nop
     sw t4, 32(fp)
 
     addi t2, x0, 1
-    nop
     nop
     nop
     nop
@@ -787,9 +708,7 @@ example:
     nop
     nop
     nop
-    nop
     slli t2, t2, 8
-    nop
     nop
     nop
     nop
@@ -799,9 +718,7 @@ example:
     nop
     nop
     nop
-    nop
     addi t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -814,10 +731,8 @@ recast:
     nop
     nop
     nop
-    nop
     slt t2, t3, t2
 
-    nop
     nop
     nop
     nop
@@ -833,12 +748,9 @@ pat:
     nop
     nop
     nop
-    nop
-    nop
     sw t2, 16(fp)
 
     lw t2, 16(fp)
-    nop
     nop
     nop
     nop
@@ -848,18 +760,15 @@ pat:
     nop
     nop
     nop
-    nop
     or t3, t3, t2
 
     lw t2, 16(fp)
     nop
     nop
     nop
-    nop
     sw t3, 0(t2)
 
     addi sp, fp, 0
-    nop
     nop
     nop
     nop
@@ -875,9 +784,7 @@ pat:
 # -------------------------
 
 is_visited:
-    nop
     addi sp, sp, -32
-    nop
     nop
     nop
     nop
@@ -887,11 +794,9 @@ is_visited:
     nop
     nop
     nop
-    nop
     sw t4, 32(fp)
 
     ori t2, x0, 1
-    nop
     nop
     nop
     nop
@@ -908,9 +813,7 @@ justify:
     nop
     nop
     nop
-    nop
     slli t2, t2, 8
-    nop
     nop
     nop
     nop
@@ -920,9 +823,7 @@ justify:
     nop
     nop
     nop
-    nop
     addi t2, t2, 1
-    nop
     nop
     nop
     nop
@@ -935,10 +836,8 @@ evasive:
     nop
     nop
     nop
-    nop
     slt t2, t3, t2
 
-    nop
     nop
     nop
     nop
@@ -954,10 +853,8 @@ representative:
     nop
     nop
     nop
-    nop
     lw t2, 0(t2)
 
-    nop
     nop
     nop
     nop
@@ -969,9 +866,7 @@ representative:
     nop
     nop
     nop
-    nop
     and t2, t3, t2
-    nop
     nop
     nop
     nop
@@ -979,11 +874,9 @@ representative:
     nop
     nop
     nop
-    nop
     andi t2, t2, 0xff
 
     addi sp, fp, 0
-    nop
     nop
     nop
     nop

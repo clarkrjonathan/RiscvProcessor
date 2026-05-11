@@ -2,8 +2,6 @@
 .globl main
 
     jal   x0, main          # force entry point
-    nop
-    nop
 
 main:
 
@@ -12,8 +10,6 @@ main:
     # -------------------------------------------------------
     addi  x1,  x0,  100     # x1  = 100
     addi  x5,  x0,  -50     # x5  = -50  (DO NOT use x2; x2 is sp)
-    nop
-    nop
     addi  x3,  x1,  25      # x3  = 125
 
     slti  x4,  x1,  200     # x4  = 1  (100 < 200 signed)
@@ -27,9 +23,6 @@ main:
     andi  x11, x1,  255     # x11 = 100 AND 255 = 100
 
     slli  x12, x1,  2       # x12 = 100 << 2 = 400
-    nop
-    nop
-    nop
     srli  x13, x12, 1       # x13 = 400 >> 1 = 200 (logical)
     srai  x14, x5,  1       # x14 = -50 >> 1 = -25 (arithmetic)
 
@@ -59,9 +52,6 @@ main:
     # -------------------------------------------------------
     addi  sp, sp, -8        # allocate 8 bytes on stack
 
-    nop
-    nop
-    nop
     sw    x17, 4(sp)        # store 225
     sw    x18, 0(sp)        # store 25
 
@@ -110,45 +100,28 @@ main:
     addi  t0, x0, 10
     addi  t1, x0, 20
 
-    nop
-    nop
     beq   t0, t0, beq_ok
-    nop
-    nop
     addi  x1, x0, 0
 beq_ok:
 
     bne   t0, t1, bne_ok
-    nop
-    nop
     addi  x1, x0, 0
 bne_ok:
 
     blt   t0, t1, blt_ok
-    nop
-    nop
     addi  x1, x0, 0
 blt_ok:
 
     bge   t1, t0, bge_ok
-    nop
-    nop
     addi  x1, x0, 0
 bge_ok:
 
     addi  t2, x0, -1
-    nop
-    nop
-    nop
     bltu  t1, t2, bltu_ok
-    nop
-    nop
     addi  x1, x0, 0
 bltu_ok:
 
     bgeu  t2, t1, bgeu_ok
-    nop
-    nop
     addi  x1, x0, 0
 bgeu_ok:
 
@@ -156,18 +129,12 @@ bgeu_ok:
     # JAL / JALR
     # -------------------------------------------------------
     jal   ra, jal_target
-    nop
-    nop
     addi  x31, x0, 99
     jal   x0, done
-    nop
-    nop
 
 jal_target:
     addi  x30, x0, 42
     jalr  x0, ra, 0
-    nop
-    nop
 
 done:
     wfi
