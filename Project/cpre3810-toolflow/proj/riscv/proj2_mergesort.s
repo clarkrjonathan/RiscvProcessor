@@ -14,13 +14,11 @@ main:
     nop
     nop
     nop
-    nop
     sw ra, 0(sp)
 
     lasw a0, array
 
     lui t0, %hi(array_size)
-    nop
     nop
     nop
     nop
@@ -30,9 +28,7 @@ main:
     nop
     nop
     nop
-    nop
     addi t1, t1, %lo(sort)
-    nop
     nop
     nop
     nop
@@ -51,9 +47,7 @@ main:
 
 # ---------------- SORT ----------------
 sort:
-    nop
     addi sp, sp, -36
-    nop
     nop
     nop
     nop
@@ -76,7 +70,6 @@ sort:
     nop
     nop
     nop
-    nop
     blt s1, t0, sort_done
     nop
     nop
@@ -85,7 +78,6 @@ sort:
 
 
 outer_width_loop:
-    nop
     nop
     nop
     nop
@@ -100,13 +92,11 @@ pair_loop:
     nop
     nop
     nop
-    nop
     bge s4, s1, copy_back
     nop
     nop
 
     add s5, s4, s3
-    nop
     nop
     nop
     nop
@@ -120,9 +110,7 @@ mid_ok:
     nop
     nop
     nop
-    nop
     add s6, s4, t0
-    nop
     nop
     nop
     nop
@@ -139,7 +127,6 @@ right_ok:
 
 merge_loop:
     nop
-    nop
     bge t1, s5, copy_right_remain
     nop
     nop
@@ -151,9 +138,7 @@ merge_loop:
     nop
     nop
     nop
-    nop
     add t5, s0, t4
-    nop
     nop
     nop
     nop
@@ -163,15 +148,12 @@ merge_loop:
     nop
     nop
     nop
-    nop
     add t5, s0, t4
-    nop
     nop
     nop
     nop
     lw t0, 0(t5)
 
-    nop
     nop
     nop
     nop
@@ -185,9 +167,7 @@ take_right:
     nop
     nop
     nop
-    nop
     add t5, s2, t4
-    nop
     nop
     nop
     nop
@@ -200,9 +180,7 @@ take_right:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(merge_loop)
-    nop
     nop
     nop
     nop
@@ -216,9 +194,7 @@ take_left:
     nop
     nop
     nop
-    nop
     add t5, s2, t4
-    nop
     nop
     nop
     nop
@@ -231,9 +207,7 @@ take_left:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(merge_loop)
-    nop
     nop
     nop
     nop
@@ -257,9 +231,7 @@ copy_left_loop:
     nop
     nop
     nop
-    nop
     add t5, s0, t4
-    nop
     nop
     nop
     nop
@@ -269,9 +241,7 @@ copy_left_loop:
     nop
     nop
     nop
-    nop
     add t5, s2, t4
-    nop
     nop
     nop
     nop
@@ -284,9 +254,7 @@ copy_left_loop:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(copy_left_loop)
-    nop
     nop
     nop
     nop
@@ -310,9 +278,7 @@ copy_right_loop:
     nop
     nop
     nop
-    nop
     add t5, s0, t4
-    nop
     nop
     nop
     nop
@@ -322,9 +288,7 @@ copy_right_loop:
     nop
     nop
     nop
-    nop
     add t5, s2, t4
-    nop
     nop
     nop
     nop
@@ -337,9 +301,7 @@ copy_right_loop:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(copy_right_loop)
-    nop
     nop
     nop
     nop
@@ -353,16 +315,13 @@ next_pair:
     nop
     nop
     nop
-    nop
     add s4, s4, t0
 
     lui t0, %hi(pair_loop)
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(pair_loop)
-    nop
     nop
     nop
     nop
@@ -379,7 +338,6 @@ copy_back_loop:
     nop
     nop
     nop
-    nop
     bge s7, s1, next_width
     nop
     nop
@@ -388,16 +346,13 @@ copy_back_loop:
     nop
     nop
     nop
-    nop
     add t1, s2, t0
-    nop
     nop
     nop
     nop
     lw t2, 0(t1)
 
     add t3, s0, t0
-    nop
     nop
     nop
     nop
@@ -409,9 +364,7 @@ copy_back_loop:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(copy_back_loop)
-    nop
     nop
     nop
     nop
@@ -427,9 +380,7 @@ next_width:
     nop
     nop
     nop
-    nop
     addi t0, t0, %lo(outer_width_loop)
-    nop
     nop
     nop
     nop
@@ -451,7 +402,6 @@ sort_done:
 
     addi sp, sp, 36
 
-    nop
     nop
     nop
     jalr x0, 0(ra)
