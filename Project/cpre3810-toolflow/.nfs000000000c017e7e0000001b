@@ -1,0 +1,127 @@
+# //  Questa Sim-64
+# //  Version 2025.1_2 linux_x86_64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Break key hit
+# Break key hit
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_RS2Data \
+vsim:/tb/MyRiscv/s_RS1Data
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_IF_ID_Squash \
+vsim:/tb/MyRiscv/s_ID_EX_Squash
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/mem_PCWriteBack
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_RS2Data \
+vsim:/tb/MyRiscv/ex_RS1Data
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_CondMet_EX
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_ALUOut_EX
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/s_RegWrData \
+vsim:/tb/MyRiscv/s_RegWrAddr
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/wb_WRBCKSEL
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_ALUSrc
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/ex_ALUCTL
+add wave -position insertpoint  \
+vsim:/tb/MyRiscv/wb_WRBCKSEL \
+vsim:/tb/MyRiscv/wb_regWrite \
+vsim:/tb/MyRiscv/wb_PCWriteBack \
+vsim:/tb/MyRiscv/wb_Inst \
+vsim:/tb/MyRiscv/wb_Imm \
+vsim:/tb/MyRiscv/wb_ByteOut \
+vsim:/tb/MyRiscv/wb_ALUOut \
+vsim:/tb/MyRiscv/s_WRBCKSEL_d \
+vsim:/tb/MyRiscv/s_RS2Data \
+vsim:/tb/MyRiscv/s_RS1Data \
+vsim:/tb/MyRiscv/s_regWrite_d \
+vsim:/tb/MyRiscv/s_RegWrData \
+vsim:/tb/MyRiscv/s_RegWrAddr \
+vsim:/tb/MyRiscv/s_RegWr \
+vsim:/tb/MyRiscv/s_PCWriteBack_EX \
+vsim:/tb/MyRiscv/s_PCFetch \
+vsim:/tb/MyRiscv/s_PC \
+vsim:/tb/MyRiscv/s_Ovfl \
+vsim:/tb/MyRiscv/s_memWrite_d \
+vsim:/tb/MyRiscv/s_jump_d \
+vsim:/tb/MyRiscv/s_jalr_d \
+vsim:/tb/MyRiscv/s_Inst \
+vsim:/tb/MyRiscv/s_IncPC \
+vsim:/tb/MyRiscv/s_Imm_MEM \
+vsim:/tb/MyRiscv/s_Imm_EX \
+vsim:/tb/MyRiscv/s_Imm \
+vsim:/tb/MyRiscv/s_IMemAddr \
+vsim:/tb/MyRiscv/s_IF_ID_Squash \
+vsim:/tb/MyRiscv/s_ID_EX_Squash \
+vsim:/tb/MyRiscv/s_haltFlag_d \
+vsim:/tb/MyRiscv/s_Halt \
+vsim:/tb/MyRiscv/s_DMemWr \
+vsim:/tb/MyRiscv/s_DMemOut \
+vsim:/tb/MyRiscv/s_DMemData \
+vsim:/tb/MyRiscv/s_DMemAddr \
+vsim:/tb/MyRiscv/s_CondMet_EX \
+vsim:/tb/MyRiscv/s_ByteOut_MEM \
+vsim:/tb/MyRiscv/s_byteOp_d \
+vsim:/tb/MyRiscv/s_BranchTarget \
+vsim:/tb/MyRiscv/s_BranchJumpAdded \
+vsim:/tb/MyRiscv/s_BranchJump_EX \
+vsim:/tb/MyRiscv/s_branch_d \
+vsim:/tb/MyRiscv/s_BJAdder_A \
+vsim:/tb/MyRiscv/s_AUIPC_d \
+vsim:/tb/MyRiscv/s_ALUZero_EX \
+vsim:/tb/MyRiscv/s_ALUSrc_d \
+vsim:/tb/MyRiscv/s_ALUOut_EX \
+vsim:/tb/MyRiscv/s_ALUOp \
+vsim:/tb/MyRiscv/s_ALUCTL \
+vsim:/tb/MyRiscv/s_ALU_B \
+vsim:/tb/MyRiscv/s_ALU_A \
+vsim:/tb/MyRiscv/oALUOut \
+vsim:/tb/MyRiscv/mem_WRBCKSEL \
+vsim:/tb/MyRiscv/mem_RS2Data \
+vsim:/tb/MyRiscv/mem_regWrite \
+vsim:/tb/MyRiscv/mem_PCWriteBack \
+vsim:/tb/MyRiscv/mem_memWrite \
+vsim:/tb/MyRiscv/mem_Inst \
+vsim:/tb/MyRiscv/mem_haltFlag \
+vsim:/tb/MyRiscv/mem_byteOp \
+vsim:/tb/MyRiscv/mem_ALUOut \
+vsim:/tb/MyRiscv/iRST \
+vsim:/tb/MyRiscv/iInstLd \
+vsim:/tb/MyRiscv/iInstExt \
+vsim:/tb/MyRiscv/iInstAddr \
+vsim:/tb/MyRiscv/id_PCInc \
+vsim:/tb/MyRiscv/id_PC \
+vsim:/tb/MyRiscv/id_Inst \
+vsim:/tb/MyRiscv/iCLK \
+vsim:/tb/MyRiscv/ex_WRBCKSEL \
+vsim:/tb/MyRiscv/ex_RS2Data \
+vsim:/tb/MyRiscv/ex_RS1Data \
+vsim:/tb/MyRiscv/ex_regWrite \
+vsim:/tb/MyRiscv/ex_PCInc \
+vsim:/tb/MyRiscv/ex_PC \
+vsim:/tb/MyRiscv/ex_memWrite \
+vsim:/tb/MyRiscv/ex_jump \
+vsim:/tb/MyRiscv/ex_jalr \
+vsim:/tb/MyRiscv/ex_Inst \
+vsim:/tb/MyRiscv/ex_Imm \
+vsim:/tb/MyRiscv/ex_haltFlag \
+vsim:/tb/MyRiscv/ex_byteOp \
+vsim:/tb/MyRiscv/ex_branch \
+vsim:/tb/MyRiscv/ex_AUIPC \
+vsim:/tb/MyRiscv/ex_ALUSrc \
+vsim:/tb/MyRiscv/ex_ALUCTL
