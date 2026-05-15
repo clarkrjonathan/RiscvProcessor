@@ -1,0 +1,139 @@
+[N
+12
+12
+18 adder_subtractor_n
+10
+8 mux2t1_n
+4
+1 N
+11
+7 adder_n
+7
+8 mux4t1_n
+8
+8 dataflow
+1
+95 /home/jclark15/cpre381/RiscvProcessor/Project/cpre3810-toolflow/internal/ModelSimContainer/work
+2
+6 xorg_n
+6
+5 org_n
+9
+9 logicunit
+3
+10 structural
+5
+6 andg_n
+]
+[G
+1
+10
+8
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+9
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+7
+8
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+5
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+12
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+11
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+2
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
+[G
+1
+6
+3
+1
+4
+1
+0
+32
+0
+0 0
+0
+0
+]
