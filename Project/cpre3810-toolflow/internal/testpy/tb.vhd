@@ -93,26 +93,36 @@ begin
   end process;  
   
   -- Dumps modifications to the state of the processor to trace file
-  P_DUMP_STATE: process (CLK) 
+  -- [TOOLFLOW/GHDL] Uses `wait on CLK` instead of a (CLK) sensitivity list:
+  -- GHDL 4.1 cannot resolve the hierarchical external-name aliases below inside
+  -- a *sensitized* process. Behaviour is identical (fires on every CLK edge).
+  P_DUMP_STATE: process
     file my_dump : TEXT open WRITE_MODE is OUTPUT_TRACE;
     variable my_line : LINE;
     variable cycle_cnt : integer := 0;
 
     -- Setup hierarchical/external names
     -- Reference for external names: https://www.doulos.com/knowhow/vhdl_designers_guide/vhdl_2008/vhdl_200x_ease/#hierarchicalnames
+    -- [TOOLFLOW/GHDL] The vector widths below are written as literals (31 downto 0)
+    -- rather than (N-1 downto 0). GHDL 4.1 mis-evaluates the testbench generic N
+    -- inside an external-name subtype indication, which makes the elaboration-time
+    -- length check fail with a spurious bound-check error. N is 32 here, so these
+    -- are identical; the literal form simply avoids the GHDL bug.
     alias memWr is <<signal MyRiscv.s_DMemWr : std_logic>>;
-    alias memAddr is <<signal MyRiscv.s_DMemAddr : std_logic_vector(N-1 downto 0)>>;
-    alias memData is <<signal MyRiscv.s_DMemData : std_logic_vector(N-1 downto 0)>>;
+    alias memAddr is <<signal MyRiscv.s_DMemAddr : std_logic_vector(31 downto 0)>>;
+    alias memData is <<signal MyRiscv.s_DMemData : std_logic_vector(31 downto 0)>>;
 
     alias regWr is <<signal MyRiscv.s_RegWr : std_logic>>;
     alias regWrAddr is <<signal MyRiscv.s_RegWrAddr : std_logic_vector(4 downto 0)>>;
-    alias regWrData is <<signal MyRiscv.s_RegWrData : std_logic_vector(N-1 downto 0)>>;
+    alias regWrData is <<signal MyRiscv.s_RegWrData : std_logic_vector(31 downto 0)>>;
 
     alias halt is <<signal MyRiscv.s_Halt : std_logic>>;
     alias ovfl is <<signal MyRiscv.s_Ovfl : std_logic>>;
 
 
   begin
+
+      wait on CLK;
 
       if (rising_edge(CLK) and (reset_done = '1')) then
 

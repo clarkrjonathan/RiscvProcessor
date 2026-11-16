@@ -1,3 +1,11 @@
 /output/
 /internal/ModelSimContainer/
 /internal/ModelSimContainer/work/
+
+# Open-source (GHDL/yosys) toolflow generated artifacts
+/internal/GhdlContainer/
+/containers/
+/temp/
+imem.hex
+dmem.hex
+__pycache__/

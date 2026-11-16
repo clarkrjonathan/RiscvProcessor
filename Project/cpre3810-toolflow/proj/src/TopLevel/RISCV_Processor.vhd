@@ -61,7 +61,8 @@ architecture structure of RISCV_Processor is
 
   component mem is
     generic(ADDR_WIDTH : integer;
-            DATA_WIDTH : integer);
+            DATA_WIDTH : integer;
+            INIT_FILE  : string := "");  -- [TOOLFLOW/GHDL] sim pre-load hex file
     port(
           clk          : in std_logic;
           addr         : in std_logic_vector((ADDR_WIDTH-1) downto 0);
@@ -315,16 +316,18 @@ begin
 
   IMem: mem
     generic map(ADDR_WIDTH => ADDR_WIDTH,
-                DATA_WIDTH => N)
+                DATA_WIDTH => N,
+                INIT_FILE  => "imem.hex")  -- [TOOLFLOW/GHDL] replaces ModelSim `mem load`
     port map(clk  => iCLK,
              addr => s_IMemAddr(11 downto 2),
              data => iInstExt,
              we   => iInstLd,
              q    => s_Inst);
-  
+
   DMem: mem
     generic map(ADDR_WIDTH => ADDR_WIDTH,
-                DATA_WIDTH => N)
+                DATA_WIDTH => N,
+                INIT_FILE  => "dmem.hex")  -- [TOOLFLOW/GHDL] replaces ModelSim `mem load`
     port map(clk  => iCLK,
              addr => s_DMemAddr(11 downto 2),
              data => s_DMemData,
