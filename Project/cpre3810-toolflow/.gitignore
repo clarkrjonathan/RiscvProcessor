@@ -9,3 +9,4 @@
 imem.hex
 dmem.hex
 __pycache__/
+internal/snthpy/stdcells/*.lib

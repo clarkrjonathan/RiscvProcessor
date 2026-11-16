@@ -38,9 +38,10 @@ def main(args):
     # If a licensed Quartus install is not available, fall back to the
     # open-source synthesis flow (yosys + ghdl-yosys-plugin). No license needed.
     if quartus_path is None or not os.path.isdir(quartus_path):
-        print('Quartus not found -- using open-source synthesis (yosys + ghdl).')
-        print('Note: this reports relative area / logic-depth proxies, not')
-        print('      Cyclone-IV FMax in MHz (no open timing model exists for Altera).')
+        print('Quartus not found -- using open-source synthesis (yosys + ghdl + ABC).')
+        print('Note: timing is a standard-cell (Nangate45, 45nm) estimate of the')
+        print('      register-to-register logic critical path, not a Cyclone-IV')
+        print('      sign-off (no open timing model exists for Altera parts).')
         ok = synth_oss.run(env)
         exit(0 if ok else 1)
 

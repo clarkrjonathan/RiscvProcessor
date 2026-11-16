@@ -73,12 +73,32 @@ Results land in `output/<program>/`:
 
 ## 4. A note on `synth`
 
-`synth` runs license-free via yosys + GHDL and writes `temp/timing.txt`. Because
-there is **no open timing model for the Altera Cyclone IV** part, it reports
-*structural proxies* — total gate/cell count (area) and longest topological path
-(logic depth) — **not** a real FMax in MHz. These are good for comparing two
-versions of your processor, but are not the Quartus number. The original Quartus
-timing report is preserved for reference in `temp/timing.txt` in git history.
+`synth` runs license-free via yosys + GHDL + ABC and writes `temp/timing.txt`.
+
+It synthesizes the processor to an open **standard-cell library** (Nangate45,
+45 nm typical) and runs ABC static timing to report a **real critical-path delay
+in nanoseconds**, an implied FMax, and cell area in µm². The first time, fetch a
+library:
+
+```bash
+bash internal/snthpy/fetch_stdcells.sh     # one-time, downloads Nangate45
+./3810_tf.sh synth
+```
+
+(If no library is present it falls back to structural proxies and tells you to
+run the fetch script.)
+
+Scope — read before quoting the number:
+- The timing is the **register-to-register logic** critical path (control, ALU,
+  shifter, byte unit, muxes, register file). The 1K×32 memories are treated as
+  macro boundaries, exactly as Quartus maps them to block RAM.
+- It is an **ABC estimate in a 45 nm cell process** (real cell delays, but no
+  wire RC and no clock skew) — great for comparing processor variants and
+  reproducible, but **not** a Cyclone-IV sign-off. There is no open timing model
+  for Altera parts, so the exact Quartus FMax cannot be reproduced.
+
+The original Quartus Cyclone-IV timing report is preserved for reference in git
+history (`git show HEAD:…/temp/timing.txt` on `main`).
 
 ## 5. What changed under the hood (for reference)
 
