@@ -5,6 +5,7 @@ import datetime
 import traceback
 import build, parse_timings, generate_project as gp
 import config_parser
+import synth_oss
 import argparse
 
 no_timings_message = '''
@@ -34,12 +35,15 @@ def main(args):
     config_parameters, env = config_parser.read_config(args.config)
     quartus_path = config_parameters.quartus
 
-    # exit if quartus is not installed in the expected location
-    if not os.path.isdir(quartus_path):
-        print(r'Quartus is not installed in the expected location: ', quartus_path)
-        print('If you are in the TLA, You can use the computers by the soldering irons, or the lab across the hallway')
-        print('Additionally, if you are attempting a custom install, make sure to install quartus prime')
-        exit(1)
+    # If a licensed Quartus install is not available, fall back to the
+    # open-source synthesis flow (yosys + ghdl-yosys-plugin). No license needed.
+    if quartus_path is None or not os.path.isdir(quartus_path):
+        print('Quartus not found -- using open-source synthesis (yosys + ghdl + ABC).')
+        print('Note: timing is a standard-cell (Nangate45, 45nm) estimate of the')
+        print('      register-to-register logic critical path, not a Cyclone-IV')
+        print('      sign-off (no open timing model exists for Altera parts).')
+        ok = synth_oss.run(env)
+        exit(0 if ok else 1)
 
     # list vhd files to include in the quartus project
     vhd_list = gp.find_vhd_files(dir='proj/src')

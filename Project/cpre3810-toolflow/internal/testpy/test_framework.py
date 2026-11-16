@@ -12,7 +12,7 @@ import datetime
 import hashlib
 import logging
 from rars import Rars
-from modelsim import Modelsim
+from ghdl import Ghdl
 import args
 import multiprocessing as mp
 from dump_compare import DumpCompare
@@ -47,8 +47,9 @@ def main():
         print('\nprogram is exiting\n')
         exit(1)
 
-    if not Modelsim.is_installed(config, env):
-        print('\nModelsim does not seem to be installed in the expected location')
+    if not Ghdl.is_installed(config, env):
+        print('\nGHDL does not seem to be installed (no `ghdl` on PATH)')
+        print('Install it with: sudo apt-get install -y ghdl')
         print('\nProgram is exiting\n')
         exit(1)
 
@@ -58,13 +59,13 @@ def main():
 
     warn_tb_checksum()
 
-    ms = Modelsim(config.modelsim, env)
+    ms = Ghdl(config.modelsim, env)
 
     if not options.nocompile:
-        compile_success = ms.compile('internal/ModelSimContainer/work', "internal/ModelSimContainer/vcom.log")
+        compile_success = ms.compile('internal/GhdlContainer/work', "internal/GhdlContainer/vcom.log")
         if not compile_success:
             print("VHDL Compile Failed -- Errors:")
-            shutil.copyfile("internal/ModelSimContainer/vcom.log", "output/vcom.log")
+            shutil.copyfile("internal/GhdlContainer/vcom.log", "output/vcom.log")
             print("-" * 80)
             print_compile_errors("output/vcom.log")
             print("-" * 80)
@@ -130,7 +131,7 @@ class SimWorker:
         self.config = config
         self.env = env
         self.options = options
-        self.ms = Modelsim(config.modelsim, env)
+        self.ms = Ghdl(config.modelsim, env)
 
     def wait_for_work(self,wqueue,rqueue):
         while True: 
@@ -203,24 +204,24 @@ class SimWorker:
         return results
 
 def create_sim_containers(count):
-    ''' Copies compiled work into the containers for a SimWorkerGroup to use '''
-    try: 
+    ''' Creates one working directory per simulation job.
+
+    Under GHDL the analyzed `work` library (internal/GhdlContainer/work) is read
+    concurrently by every job, so containers only need to hold the per-program
+    imem.hex/dmem.hex that RARS writes and the trace GHDL produces. '''
+    try:
         shutil.rmtree('containers')
-    except FileNotFoundError: 
+    except FileNotFoundError:
         pass
 
     os.mkdir('containers')
 
-    if not os.path.isdir('internal/ModelSimContainer/work'):
-        raise Exception('Could not create sim containers since there is no work to copy')
+    if not os.path.isdir('internal/GhdlContainer/work'):
+        raise Exception('Could not create sim containers: VHDL was not analyzed (no work library)')
 
-    # copy each container int work
     for i in range(count):
         base = f'containers/sim_container_{i}'
         os.mkdir(base)
-        shutil.copytree('internal/ModelSimContainer/work',f'{base}/work',)
-        shutil.copyfile('internal/ModelSimContainer/vcom.log',f'{base}/vcom.log',)
-        shutil.copyfile('internal/testpy/modelsim_framework.do',f'{base}/modelsim_framework.do')
 
 def check_vhdl_present():
     '''
@@ -286,7 +287,8 @@ def warn_tb_checksum():
     Assumes file exists. Allows both LF and CRLF line endings.
     '''
     expected = {
-        b'U\xdf~3\xf9\xe1\xedb\x1a\xb7MEX\xe0MO'
+        b'U\xdf~3\xf9\xe1\xedb\x1a\xb7MEX\xe0MO',          # original ModelSim release
+        bytes.fromhex('5c696b5588433bc38362cdb12c5eacdc'),  # GHDL-adapted release
         }
 
     # copy these lines to generate new expected checksums
