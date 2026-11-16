@@ -40,8 +40,13 @@ TOP = 'RISCV_Processor'
 # with the STDCELL_LIB environment variable to point at your own library.
 STDCELL_DIR = os.path.join(os.path.dirname(__file__), 'stdcells')
 
-# ABC script: structure, map to the liberty, then static-timing report.
-ABC_SCRIPT = 'strash\ndch\nmap\ntopo\nstime\n'
+# ABC script: structure, map to the liberty, then static-timing report with the
+# critical path dumped node-by-node (stime -p).
+ABC_SCRIPT = 'strash\ndch\nmap\ntopo\nstime -p\n'
+
+# Clock constraint used to compute slack, matching the course SDC
+# (create_clock -period 20.000 => 50 MHz target).
+CLK_CONSTRAINT_NS = 20.0
 
 
 def _ghdl_prefix():
@@ -166,45 +171,97 @@ def run(env):
     return True
 
 
-def _write_timing_report(log_path, lib):
-    """Parse ABC stime + stat and write temp/timing.txt with real ns timing."""
-    text = _read(log_path)
+# A node on the ABC critical path:
+#   "ABC: Path  5 --    5872 : 4    1 NAND4_X1  A =  1.33  Df = 701.2 -..."
+_PATH_RE = re.compile(
+    r'Path\s+\d+\s+--\s+(?P<idx>\d+)\s*:\s+\d+\s+\d+\s+(?P<cell>\S+)\s+'
+    r'A\s*=\s*[0-9.]+\s+Df\s*=\s*(?P<df>[0-9.]+)')
+_ENDS_RE = re.compile(
+    r'Start-point\s*=\s*\S+\s*\((?P<start>.+?)\)\.\s+'
+    r'End-point\s*=\s*\S+\s*\((?P<end>.+?)\)\.')
 
-    # ABC stime line: "... Area = 7550.41 (...)  Delay = 2973.97 ps (...)"
-    delay_ps = None
-    for m in re.finditer(r'Delay\s*=\s*([0-9.]+)\s*ps', text):
-        delay_ps = float(m.group(1))          # take the last (final mapped) value
+
+def _clean_name(s):
+    return s.replace('\\', '').replace(' ', '').strip()
+
+
+def _write_timing_report(log_path, lib):
+    """Parse the ABC stime -p critical path and emit a Quartus-style report."""
+    abc_txt = _read(os.path.abspath('temp/synth_abc.txt')) or _read(log_path)
+
+    # Collect the ordered path nodes (cumulative delay Df in ps, cell type).
+    nodes = [(float(m.group('df')), m.group('cell'), m.group('idx'))
+             for m in _PATH_RE.finditer(abc_txt)]
+    em = _ENDS_RE.search(abc_txt)
+    start_name = _clean_name(em.group('start')) if em else '(start)'
+    end_name   = _clean_name(em.group('end'))   if em else '(end)'
+
     area_um2 = None
-    for m in re.finditer(r"Chip area for module.*?:\s*([0-9.]+)", text):
+    for m in re.finditer(r"Chip area for module.*?:\s*([0-9.]+)", _read(log_path)):
         area_um2 = float(m.group(1))
     gates = _grep_last(log_path, 'Number of cells:')
 
-    with open('temp/timing.txt', 'w') as out:
-        out.write('#\n# CprE 3810 toolflow -- open-source synthesis + timing\n#\n')
-        out.write(f'# Library : {os.path.basename(lib)} (Nangate45, 45nm typical)\n')
-        out.write('# Tool    : yosys + ghdl-yosys-plugin + ABC static timing\n')
-        out.write('# Scope   : register-to-register LOGIC critical path.\n')
-        out.write('#           1K x 32 memories are treated as macro boundaries\n')
-        out.write('#           (blackboxed), as Quartus maps them to block RAM.\n')
-        out.write('#           ABC estimate: real cell delays, no wire RC / clock\n')
-        out.write('#           skew, 45nm process -- not a Cyclone-IV sign-off.\n#\n\n')
-        if delay_ps:
-            fmax_mhz = 1.0e6 / delay_ps       # 1/(delay_ps*1e-12) in MHz
-            out.write(f'Logic critical-path delay : {delay_ps/1000.0:.3f} ns  '
-                      f'({delay_ps:.1f} ps)\n')
-            out.write(f'Implied FMax              : {fmax_mhz:.1f} MHz\n')
-        else:
-            out.write('Logic critical-path delay : n/a (see temp/synth_abc.txt)\n')
-        out.write(f'Standard-cell area        : '
-                  f'{area_um2:.1f} um^2\n' if area_um2 else
-                  'Standard-cell area        : n/a\n')
-        out.write(f'Mapped logic cell count   : {gates if gates else "n/a"}\n\n')
-        out.write('Full ABC timing output : temp/synth_abc.txt\n')
-        out.write('Full area breakdown    : temp/synth_stat.txt\n')
+    arrival_ns = nodes[-1][0] / 1000.0 if nodes else None
 
-    if delay_ps:
-        fmax_mhz = 1.0e6 / delay_ps
-        print(f'  Logic critical path: {delay_ps/1000.0:.3f} ns  (FMax ~ {fmax_mhz:.0f} MHz)')
+    with open('temp/timing.txt', 'w') as out:
+        out.write('#\n# CprE 3810 toolflow -- open-source timing dump\n#\n')
+        out.write(f'# Library: {os.path.basename(lib)} (Nangate45, 45nm typ)   '
+                  'Tool: yosys + ghdl + ABC\n')
+        out.write('# Scope  : register/RAM-boundary to register/RAM-boundary LOGIC path.\n')
+        out.write('#          The 1K x 32 memories are macro boundaries (blackboxed),\n')
+        out.write('#          as Quartus maps them to block RAM, so this is shorter\n')
+        out.write('#          than the original Quartus path that traversed block RAM.\n')
+        out.write('#          ABC estimate: real cell delays, no wire RC / clock skew.\n#\n\n')
+
+        if arrival_ns is not None:
+            fmax = 1000.0 / arrival_ns
+            slack = CLK_CONSTRAINT_NS - arrival_ns
+            out.write(f'FMax: {fmax:.2f}mhz Clk Constraint: {CLK_CONSTRAINT_NS:.2f}ns '
+                      f'Slack: {slack:.2f}ns\n\n')
+            out.write('The path is given below\n\n')
+            out.write(' ' + '=' * 67 + '\n')
+            out.write(f' From Node    : {start_name}\n')
+            out.write(f' To Node      : {end_name}\n')
+            out.write(' Launch Clock : iCLK\n')
+            out.write(' Latch Clock  : iCLK\n')
+            out.write(' Data Arrival Path:\n')
+            out.write(' Total (ns)  Incr (ns)   Type   Element\n')
+            out.write(' ==========  =========  =====   ' + '=' * 34 + '\n')
+            prev = 0.0
+            for i, (df_ps, cell, idx) in enumerate(nodes):
+                total = df_ps / 1000.0
+                incr = total - prev
+                prev = total
+                if i == 0:
+                    typ, elem = 'pi  ', start_name
+                else:
+                    typ, elem = 'CELL', f'{cell} (#{idx})'
+                    if i == len(nodes) - 1:
+                        elem += f'  -> {end_name}'
+                out.write(f' {total:10.3f} {incr:10.3f}   {typ}   {elem}\n')
+            out.write(' Data Required Path:\n')
+            out.write(' Total (ns)  Incr (ns)   Type   Element\n')
+            out.write(' ==========  =========  =====   ' + '=' * 34 + '\n')
+            out.write(f' {CLK_CONSTRAINT_NS:10.3f} {CLK_CONSTRAINT_NS:10.3f}          '
+                      'latch edge (clock constraint)\n')
+            out.write(f' Data Arrival Time  : {arrival_ns:10.3f}\n')
+            out.write(f' Data Required Time : {CLK_CONSTRAINT_NS:10.3f}\n')
+            verdict = 'MET' if slack >= 0 else 'VIOLATED'
+            out.write(f' Slack              : {slack:10.3f} ({verdict})\n')
+            out.write(' ' + '=' * 67 + '\n\n')
+        else:
+            out.write('(no path parsed -- see temp/synth_abc.txt)\n\n')
+
+        out.write(f'Standard-cell area      : '
+                  f'{area_um2:.1f} um^2\n' if area_um2 else
+                  'Standard-cell area      : n/a\n')
+        out.write(f'Mapped logic cell count : {gates if gates else "n/a"}\n')
+        out.write('Full ABC timing output  : temp/synth_abc.txt\n')
+
+    if arrival_ns is not None:
+        print(f'  Logic critical path: {arrival_ns:.3f} ns  '
+              f'(FMax ~ {1000.0/arrival_ns:.0f} MHz, slack '
+              f'{CLK_CONSTRAINT_NS - arrival_ns:+.2f} ns vs {CLK_CONSTRAINT_NS:.0f} ns)')
 
 
 def _write_proxy_report(log_path):
